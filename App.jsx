@@ -5,8 +5,8 @@ import AboutMeIntroduction from "./components/AboutMeIntroduction";
 import ContainerImages from "./components/ContainerImages";
 import CardProjects from "./components/CardProjects";
 import Footer from "./components/Footer";
+import StarIcon from "./components/StarIcon";
 
-import fotoPerfil from "./assets/estrella.png";
 import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
 import fotoProyecto3 from "./assets/Mask group3.png";
@@ -33,9 +33,12 @@ function App() {
           }
           parrafo="Soy Luciana, una diseñadora multimedial interdisciplinaria de Argentina, con una gran pasión por crear interfaces, experiencias y productos digitales  que existen para algo más que verse bien. 
           Diseño con propósito, curiosidad y una obsesión sana por lo humano, lo interactivo y lo que deja huella."
-          imagen={fotoPerfil}
+          
           otroparrafo={
             <>
+            <div className="flex justify-center py-4 w-full">
+           <StarIcon size="w-12" />
+        </div>
               “Aunque mi fuerte es la <i>comunicación visual</i>, mi curiosidad
               por la <i>programación</i> me permite experimentar con la
               interactividad y transformar diseños estáticos en{" "}
@@ -77,7 +80,7 @@ function App() {
       </ContainerImages>
 
       <footer>
-        <Footer fotoEstrella={fotoPerfil} />
+        <Footer />
       </footer>
     </div>
   );

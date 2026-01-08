@@ -1,4 +1,6 @@
-function Footer({ fotoEstrella }) {
+import StarIcon from "../components/StarIcon";
+
+function Footer() {
   return (
     <footer className="w-full pt-32 pb-10 px-10 md:px-20">
       
@@ -11,16 +13,15 @@ function Footer({ fotoEstrella }) {
           <span className="italic font-light">Trabajemos</span> <br />
           <div className="flex items-center gap-4">
             <span>juntos</span>
-            {/* Usamos tu asset de estrella directamente */}
-            <img src={fotoEstrella} alt="estrella" className="w-12 md:w-20" />
+            <StarIcon />
           </div>
         </h2>
 
         {/* Botón de Contacto con tus imágenes de estrellas */}
         <button className="flex items-center gap-4 px-10 py-5 border border-white rounded-full text-2xl hover:bg-white hover:text-black transition-all">
-          <img src={fotoEstrella} alt="" className="w-4 opacity-70" />
+          <StarIcon className="opacity-70" size="w-4" />
           Contacto
-          <img src={fotoEstrella} alt="" className="w-4 opacity-70" />
+          <StarIcon className="opacity-70" size="w-4" />
         </button>
       </div>
 
