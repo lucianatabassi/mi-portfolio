@@ -9,7 +9,7 @@ function Footer() {
         
         <h2 className="text-6xl md:text-9xl font-serif leading-[0.8] tracking-tighter">
           <span> <i>Trabajemos</i></span> <br />
-          <div className="flex items-center gap-4">
+          <div className="flex gap-4">
             <p>juntos</p>
             <StarIcon className="w-15 md:w-30" />
           </div>

@@ -13,7 +13,7 @@ function MenuWeb() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full py-10 px-10 md:px-20 relative z-50 flex justify-end">
+    <nav className="w-full py-10 px-10 md:py-0 md:px-20 relative z-50 flex justify-end">
       
       {/*menu hamburguesa */}
       <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white z-50">
@@ -22,7 +22,7 @@ function MenuWeb() {
 
       {/* menu desktop + mobile combinados en lógica */}
       <ul className={`
-        flex gap-10 items-center text-white
+        flex gap-10 items-center
         ${isOpen ? "absolute top-16 right-0 flex-col bg-black p-10 w-full" : "hidden md:flex"} 
       `}>
         {MENU_ITEMS.map((item, index) => (

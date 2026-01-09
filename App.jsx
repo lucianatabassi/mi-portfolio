@@ -5,6 +5,8 @@ import "./index.css";
 
 import MenuWeb from "./components/MenuWeb";
 import AboutMeIntroduction from "./components/AboutMeIntroduction";
+import TwoColumnSection from "./components/TwoColumnSection";
+import Paragraph from "./components/Paragraph";
 import ContainerImages from "./components/ContainerImages";
 import CardProjects from "./components/CardProjects";
 import Footer from "./components/Footer";
@@ -34,24 +36,29 @@ function App() {
                 </div>
               </header>
               <section className="w-full">
-                <AboutMeIntroduction
+                <TwoColumnSection
                   titulo={
                     <>
                       Sobre <i>mí</i>
                     </>
                   }
-                  parrafo="Soy Luciana, una diseñadora multimedial interdisciplinaria de Argentina, con una gran pasión por crear interfaces, experiencias y productos digitales  que existen para algo más que verse bien. 
-          Diseño con propósito, curiosidad y una obsesión sana por lo humano, lo interactivo y lo que deja huella."
-                  decoracion={<StarIcon size="w-12" />}
-                  otroparrafo={
-                    <>
-                      “Aunque mi fuerte es la <i>comunicación visual</i>, mi
-                      curiosidad por la <i>programación</i> me permite
-                      experimentar con la interactividad y transformar diseños
-                      estáticos en <i>experiencias dinámicas</i>.”
-                    </>
-                  }
-                />
+                >
+                  <Paragraph>
+
+                    Soy Luciana, una diseñadora multimedial interdisciplinaria
+                    de Argentina, con una gran pasión por crear interfaces,
+                    experiencias y productos digitales que existen para algo más
+                    que verse bien. Diseño con propósito, curiosidad y una
+                    obsesión sana por lo humano, lo interactivo y lo que deja
+                    huella.
+                  </Paragraph>
+                  
+                    <StarIcon className="w-8 md:w-12" />
+
+                  <Paragraph variant="quote">
+                    “Aunque mi fuerte es la comunicación visual, mi curiosidad por la programación me permite experimentar con la interactividad y transformar diseños estáticos en experiencias dinámicas.”
+                    </Paragraph>                 
+                </TwoColumnSection>
               </section>
 
               <ContainerImages
@@ -89,7 +96,6 @@ function App() {
         />
 
         <Route path="/sobre-mi" element={<SobreMi />} />
-        
       </Routes>
 
       <footer>
