@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
 import SobreMi from "./pages/SobreMi";
+import PaginaLenceriaProyecto from "./pages/PaginaLenceriaProyecto";
 import "./index.css";
 
 import MenuWeb from "./components/MenuWeb";
-import AboutMeIntroduction from "./components/AboutMeIntroduction";
 import TwoColumnSection from "./components/TwoColumnSection";
 import Paragraph from "./components/Paragraph";
 import ContainerImages from "./components/ContainerImages";
@@ -73,6 +73,7 @@ function App() {
                   descripcion="Catalogo web diseñado y desarrollado para un local de mercería, blanquería y lencería."
                   etiqueta1="DISEÑO WEB"
                   etiqueta2="DESARROLLO FRONTEND"
+                  link="/catalogo-web"
                 />
 
                 <CardProjects
@@ -96,6 +97,7 @@ function App() {
         />
 
         <Route path="/sobre-mi" element={<SobreMi />} />
+        <Route path="/catalogo-web" element={<PaginaLenceriaProyecto />} />
       </Routes>
 
       <footer>

@@ -11,20 +11,34 @@ function ContainerImages({
 }) {
 
   return (
-    <SectionWrapper>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 items-start">
+    <div>
+      <SectionWrapper>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 items-start">
         
-        <div className="titulo-seccion">
+        <div className="md:grid-rows-1">
           <SectionTitle>{titulo}</SectionTitle>
         </div>
 
         {children}
-
         {[imagen1, imagen2, imagen3, imagen4].map(
-          (img, index) => img && <img key={index} src={img} alt="" />
+          (img, index) => 
+            img && (
+              
+              <img 
+                key={index} 
+                src={img} 
+                alt="" 
+                className="w-md h-auto object-cover" 
+              />
+            )
         )}
       </div>
-    </SectionWrapper>
+      </SectionWrapper>
+      
+    </div>
+      
+    
   );
 }
 

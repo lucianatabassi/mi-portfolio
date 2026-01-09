@@ -1,8 +1,21 @@
-function CardProjects({ imagen, descripcion, etiqueta1, etiqueta2 }) {
+import { Link } from "react-router-dom";
+
+function CardProjects({ imagen, descripcion, etiqueta1, etiqueta2, link}) {
   return (
     <div className="flex flex-col gap-6 mb-16 w-full max-w-7xl">
       <div>
-        <img src={imagen} alt="{descripcion}" className="w-full h-auto" />
+
+        {link ? (
+          <Link to={link}>
+        <img src={imagen} alt="{descripcion}" className="w-full h-auto object-cover hover:opacity-90 transition-opacity cursor-pointer" />
+        
+        </Link>
+        ) : (<img 
+          src={imagen} 
+          alt="Proyecto" 
+          className="w-full h-auto object-cover" 
+        />)}
+        
       </div>
 
       <div className="flex flex-col gap-4 px-2">

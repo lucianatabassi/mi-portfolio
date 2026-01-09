@@ -1,6 +1,7 @@
 import React from "react";
 import TwoColumnSection from "../components/TwoColumnSection";
 import Paragraph from "../components/Paragraph";
+import ContainerImages from "../components/ContainerImages";
 
 import skill1 from "../assets/skill1.png";
 import skill2 from "../assets/skill2.png";
@@ -40,7 +41,27 @@ function SobreMi() {
         </Paragraph>
       </TwoColumnSection>
 
+      <ContainerImages
+      titulo={
+          <>
+          Mis <br/> <i>habilidades</i>
+          </>
+        }
+
+        imagen1={skill1}
+        imagen2={skill2}
+        imagen3={skill3}
+        imagen4={skill4}
+      >
+        </ContainerImages>
+        
+      
+
+    
+
     </div>
+
+    
   );
 }
 
