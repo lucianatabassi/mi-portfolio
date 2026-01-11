@@ -15,7 +15,7 @@ function Footer() {
           </div>
         </h2>
 
-          <button className="w-full px-6 py-4 text-xl md:w-auto px-10 py-4 md:text-6xl bg-blue-500 text-white rounded">
+          <button className="w-full px-6 py-4 text-xl border rounded-full  md:w-auto px-10 py-4 md:text-5xl">
           Contacto
         </button>
         

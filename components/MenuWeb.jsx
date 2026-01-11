@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import StarIcon from "./StarIcon";
 
 const MENU_ITEMS = [
-  { label: "HOME", path: "/" },
-  { label: "PROYECTOS", path: "/proyectos" }, 
-  { label: "SOBRE MI", path: "/sobre-mi" },   
-  { label: "CONTACTO", path: "/contacto" },
+  { label: "home", path: "/" },
+  { label: "proyectos", path: "/proyectos" }, 
+  { label: "sobre mí", path: "/sobre-mi" },   
+  { label: "contacto", path: "/contacto" },
 ];
 
 function MenuWeb() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full py-10 px-10 md:py-0 md:px-20 relative z-50 flex justify-end">
+    <nav className="w-full py-6 px-10 md:pt-10 md:pb-5 md:px-20 z-50 flex justify-end backdrop-blur-sm">
       
       {/*menu hamburguesa */}
       <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white z-50">
@@ -22,7 +22,7 @@ function MenuWeb() {
 
       {/* menu desktop + mobile combinados en lógica */}
       <ul className={`
-        flex gap-10 items-center
+        flex gap-10 items-start
         ${isOpen ? "absolute top-16 right-0 flex-col bg-black p-10 w-full" : "hidden md:flex"} 
       `}>
         {MENU_ITEMS.map((item, index) => (
@@ -34,9 +34,7 @@ function MenuWeb() {
                 </Link>
             </li>
 
-            {index < MENU_ITEMS.length - 1 && (
-              <span className="hidden md:block"> <StarIcon /> </span>
-            )}
+           
             
           </div>
         ))}

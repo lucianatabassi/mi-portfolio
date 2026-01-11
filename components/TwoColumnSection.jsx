@@ -1,21 +1,36 @@
 import SectionWrapper from "./SectionWrapper";
 import SectionTitle from "./SectionTitle";
 
-function TwoColumnSection ({titulo, subtitulo, children}) {
+function TwoColumnSection ({titulo, imagen, subtituloProyectos, subtitulo, children}) {
 return (
     <SectionWrapper>
-        <div className="flex flex-col gap-12 md:flex-row justify-center items-start w-full md:gap-20 lg:gap-96">
-            <div className="md:w-1/3">
-        <SectionTitle>{titulo}</SectionTitle>
+        <div className="flex flex-col gap-12 md:flex-row justify-between items-start w-full md:gap-20 lg:gap-96">
+
+          <div className="flex flex-col gap-20 justify-end">
+<div className="md:w-full">
+        <SectionTitle subtitulo={subtituloProyectos}>{titulo}</SectionTitle>
         </div>
 
-        {subtitulo && (
+        
+{subtitulo && (
             <div className="text-lg md:text-xl font-sans">
               {subtitulo}
             </div>
           )}
 
-          <div className="flex flex-col gap-12">
+          
+          {imagen && (
+            <div className="">
+              <img src={imagen} alt="" className="w-full md:w-2xl"/>
+            </div>
+          )}
+          </div>
+            
+        
+        
+          
+
+          <div className="flex flex-col gap-12 md:w-xl">
             <div >
            {children}
         </div>

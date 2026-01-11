@@ -20,7 +20,7 @@ import portada from "./assets/portada.png";
 
 function App() {
   return (
-    <div className="flex flex-col gap-30 md: gap-30 min-h-screen w-full">
+    <div className="flex flex-col md:min-h-screen w-full">
       <nav>
         <MenuWeb />
       </nav>
@@ -56,12 +56,14 @@ function App() {
                     <StarIcon className="w-8 md:w-12" />
 
                   <Paragraph variant="quote">
-                    “Aunque mi fuerte es la comunicación visual, mi curiosidad por la programación me permite experimentar con la interactividad y transformar diseños estáticos en experiencias dinámicas.”
+                    <i> “Aunque mi fuerte es la comunicación visual, mi curiosidad por la programación me permite experimentar con la interactividad y transformar diseños estáticos en experiencias dinámicas.”</i>
+                   
                     </Paragraph>                 
                 </TwoColumnSection>
               </section>
 
-              <ContainerImages
+                  <section id="proyectos">
+<ContainerImages
                 titulo={
                   <>
                     <i>Trabajos</i> <br /> destacados
@@ -70,7 +72,7 @@ function App() {
               >
                 <CardProjects
                   imagen={fotoProyecto1}
-                  descripcion="Catalogo web diseñado y desarrollado para un local de mercería, blanquería y lencería."
+                  descripcion="Catálogo web diseñado y desarrollado para un comercio de mercería, blanquería y lencería."
                   etiqueta1="DISEÑO WEB"
                   etiqueta2="DESARROLLO FRONTEND"
                   link="/catalogo-web"
@@ -92,6 +94,8 @@ function App() {
                   etiqueta1="DESARROLLO DE VIDEOJUEGOS"
                 />
               </ContainerImages>
+                  </section>
+              
             </main>
           }
         />

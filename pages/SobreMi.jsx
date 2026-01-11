@@ -14,7 +14,7 @@ function SobreMi() {
       <TwoColumnSection
         titulo={
           <>
-            <i>Diseñadora multimedial</i> interdisciplinaria de Argentina.
+            <i>Diseñadora multimedial</i> interdisciplinaria.
           </>
         }
       >
@@ -33,6 +33,9 @@ function SobreMi() {
           me permite “hablar ambos lenguajes”, asegurando que ninguna idea se
           pierda en la implementación y que el resultado final sea tan fiel al
           diseño. <br />
+          Me enfocó en la resolución de problemas mediante soluciones de diseño
+          centradas en el usuario, creando experiencias digitales que no solo
+          sean visualmente atractivas, sino también intuitivas y funcionales. <br />
           <br />
           Me considero una eterna curiosa de la cultura digital, mi verdadero
           motor es el aprendizaje constante: me motiva dominar nuevas
