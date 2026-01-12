@@ -14,32 +14,39 @@ function FichaProyectos({
       titulo={tituloProyecto}
       subtituloProyectos={sobreProyecto}
     >
-      <div className="grid grid-cols-2 md:flex md:flex-row md:items-center gap-y-6 gap-x-4 md:gap-10 w-full">
+      {/* CAMBIO CLAVE:
+          - grid-cols-2: Se mantiene en Móvil Y Tablet.
+          - lg:flex: Recién en Desktop (Laptop) se pone horizontal.
+          - gap-x-4: Un poco más de aire horizontal.
+      */}
+      <div className="grid grid-cols-2 lg:flex lg:flex-row lg:items-center gap-y-6 gap-x-6 lg:gap-10 w-full">
  
-        <div className="col-span-2 md:col-span-auto flex flex-col gap-1">
+        {/* ROL: Ocupa 2 columnas en móvil/tablet para tener espacio */}
+        <div className="col-span-2 lg:col-span-auto flex flex-col gap-1">
           <h3 className="text-gray-400 text-xs uppercase tracking-widest">Rol</h3>
           <p className="text-white font-light whitespace-pre-line leading-normal">
             {rol}
           </p>
         </div>
 
-        {/* ESTRELLA 1: Solo desktop */}
-        <div className="hidden md:block text-gray-500">
+        {/* ESTRELLA 1: Oculta en móvil/tablet, visible en Desktop */}
+        <div className="hidden lg:block text-gray-500">
           <StarIcon />
         </div>
 
-        {/* BLOQUE AÑO */}
+        {/* AÑO */}
         <div className="flex flex-col gap-1">
           <h3 className="text-gray-400 text-xs uppercase tracking-widest">Año</h3>
-          <p className="text-whitefont-light">{año}</p>
+          {/* CORREGIDO: Había un error de tipeo 'text-whitefont-light' -> 'text-white font-light' */}
+          <p className="text-white font-light">{año}</p>
         </div>
 
-        {/* ESTRELLA 2: Solo desktop */}
-        <div className="hidden md:block text-gray-500">
+        {/* ESTRELLA 2: Oculta en móvil/tablet, visible en Desktop */}
+        <div className="hidden lg:block text-gray-500">
           <StarIcon />
         </div>
 
-        {/* BLOQUE TIEMPO */}
+        {/* TIEMPO */}
         <div className="flex flex-col gap-1">
           <h3 className="text-gray-400 text-xs uppercase tracking-widest">Tiempo</h3>
           <p className="text-white font-light">{tiempo}</p>

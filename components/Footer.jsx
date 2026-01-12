@@ -4,10 +4,11 @@ import StarIcon from "../components/StarIcon";
 function Footer() {
   return (
 
-    <SectionWrapper> 
+    <footer className="w-full bg-[#00000F]">
+      <SectionWrapper> 
       <div className="flex flex-col lg:flex-row justify-between items-center mb-50 gap-10">
         
-        <h2 className="text-6xl md:text-9xl font-serif leading-[0.8] tracking-tighter">
+        <h2 className="text-6xl md:text-9xl font-serif leading-tighter tracking-tighter">
           <span> <i>Trabajemos</i></span> <br />
           <div className="flex gap-4">
             <p>juntos</p>
@@ -15,7 +16,7 @@ function Footer() {
           </div>
         </h2>
 
-          <button className="w-full px-6 py-4 text-xl border rounded-full  md:w-auto px-10 py-4 md:text-5xl">
+          <button className="w-full px-6 py-4 text-xl border rounded-full  md:w-auto px-10 py-4 md:text-4xl">
           Contacto
         </button>
         
@@ -34,6 +35,8 @@ function Footer() {
 
         <p>© 2025 Luciana Tabassi</p>
       </div></SectionWrapper>
+    </footer>
+    
   )
 }
 

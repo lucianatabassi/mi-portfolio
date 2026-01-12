@@ -14,7 +14,7 @@ function SobreMi() {
       <TwoColumnSection
         titulo={
           <>
-            <i>Diseñadora multimedial</i> interdisciplinaria.
+            <i>Diseñadora multimedial</i> interdisciplinaria
           </>
         }
       >
@@ -35,36 +35,34 @@ function SobreMi() {
           diseño. <br />
           Me enfocó en la resolución de problemas mediante soluciones de diseño
           centradas en el usuario, creando experiencias digitales que no solo
-          sean visualmente atractivas, sino también intuitivas y funcionales. <br />
+          sean visualmente atractivas, sino también intuitivas y funcionales.{" "}
+          <br />
           <br />
           Me considero una eterna curiosa de la cultura digital, mi verdadero
           motor es el aprendizaje constante: me motiva dominar nuevas
           tecnologías y conocimientos que me permitan resolver con éxito los
           desafíos del entorno digital actual.
         </Paragraph>
+
+        <div className="py-3 md:py-10">
+          <button className="w-1/2  text-lg border rounded-full  md:w-auto py-2 md:px-15 md:text-w-md">
+            Curriculum
+          </button>
+        </div>
       </TwoColumnSection>
 
       <ContainerImages
-      titulo={
+        titulo={
           <>
-          Mis <br/> <i>habilidades</i>
+            Mis <br /> <i>habilidades</i>
           </>
         }
-
         imagen1={skill1}
         imagen2={skill2}
         imagen3={skill3}
         imagen4={skill4}
-      >
-        </ContainerImages>
-        
-      
-
-    
-
+      ></ContainerImages>
     </div>
-
-    
   );
 }
 

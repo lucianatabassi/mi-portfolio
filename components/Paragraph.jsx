@@ -1,14 +1,14 @@
 function Paragraph({ subtitulo, children, variant = "normal" }) {
 
-  const baseStyle = "font-sans leading-normal max-w-2xl";
+  const baseStyle = "py-8 font-sans leading-relaxed max-w-2xl flex flex-col gap-2 md:py-3 md:gap-3";
 
   const styles = {
-    normal: "font-sans font-regular text-lg md:text-lg", // Tu estilo de siempre
-    quote: "text-xl md:text-3xl font-semibold", // El nuevo estilo para la cita
+    normal: "font-regular text-base md:text-lg text-gray-200", 
+    quote: "text-xl md:text-3xl font-semibold italic", 
   };
   return (
     <div className={baseStyle}>
-      {subtitulo && (<h4 className="text-gray-400 font-medium text-xl md:text-xl uppercase tracking-widest">{subtitulo}</h4>)}
+      {subtitulo && (<h4 className="text-gray-500 font-bold text-xs md:text-sm uppercase tracking-widest">{subtitulo}</h4>)}
 
       <p className={styles[variant]}>{children}</p>
     </div>

@@ -8,6 +8,9 @@ function ContainerImages({
   imagen2,
   imagen3,
   imagen4,
+  imagen5,
+  imagen6,
+  imagen7
 }) {
 
   return (
@@ -21,7 +24,7 @@ function ContainerImages({
         </div>
 
         {children}
-        {[imagen1, imagen2, imagen3, imagen4].map(
+        {[imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7].map(
           (img, index) => 
             img && (
               
@@ -29,7 +32,7 @@ function ContainerImages({
                 key={index} 
                 src={img} 
                 alt="" 
-                className="w-md h-auto object-cover" 
+                className="w-full h-auto object-cover" 
               />
             )
         )}
