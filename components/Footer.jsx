@@ -1,13 +1,15 @@
 import SectionWrapper from "./SectionWrapper";
 import StarIcon from "../components/StarIcon";
+import Scroll from "../components/Scroll";
 
 function Footer() {
   return (
 
     <footer className="w-full bg-[#00000F]">
       <SectionWrapper> 
-      <div className="flex flex-col lg:flex-row justify-between items-center mb-50 gap-10">
+      <div className="flex flex-col lg:flex-row justify-between md:items-center mb-50 gap-10">
         
+        <Scroll>
         <h2 className="text-6xl md:text-9xl font-serif leading-tighter tracking-tighter">
           <span> <i>Trabajemos</i></span> <br />
           <div className="flex gap-4">
@@ -15,10 +17,13 @@ function Footer() {
             <StarIcon className="w-15 md:w-30" />
           </div>
         </h2>
+        </Scroll>
 
+ <Scroll>
           <button className="w-full px-6 py-4 text-xl border rounded-full  md:w-auto px-10 py-4 md:text-4xl">
           Contacto
         </button>
+        </Scroll>
         
       </div>
 

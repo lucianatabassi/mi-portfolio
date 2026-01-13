@@ -11,6 +11,7 @@ import ContainerImages from "./components/ContainerImages";
 import CardProjects from "./components/CardProjects";
 import Footer from "./components/Footer";
 import StarIcon from "./components/StarIcon";
+import Scroll from "./components/Scroll";
 
 import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
@@ -26,84 +27,109 @@ function App() {
       </nav>
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <main className="flex flex-col gap-30">
-              <header>
-                <div className="flex py-20 px-6 md:pb-50 justify-center">
-                  <img src={portada} alt="" className="w-full md:w-3/5 h-auto object-cover" />
-                </div>
-              </header>
-              <section className="w-full">
-                <TwoColumnSection
-                  titulo={
-                    <>
-                      Sobre <i>mí</i>
-                    </>
-                  }
-                >
-                  <Paragraph>
-                    Soy Luciana, una diseñadora multimedial interdisciplinaria
-                    de Argentina, con una gran pasión por crear interfaces,
-                    experiencias y productos digitales que existen para algo más
-                    que verse bien. Diseño con propósito, curiosidad y una
-                    obsesión sana por lo humano, lo interactivo y lo que deja
-                    huella.
-                  </Paragraph>
+        
+          <Route
+            path="/"
+            element={
+              <main className="flex flex-col gap-30">
+                <header>
+                  <div className="flex py-20 px-6 md:pb-20 justify-center">
+                    <img src={portada} alt="" className="w-full md:w-3/5 h-auto object-cover" />
+                  </div>
+                </header>
+                <section className="w-full">
+          
+          
+                  <TwoColumnSection
+          
+                    titulo={
+                      <>
+                        Sobre <i>mí</i>
+                      </>
+                    }
+          
+                  >
+                    
+                    <Paragraph>
+                      Soy Luciana, una diseñadora multimedial interdisciplinaria
+                      de Argentina, con una gran pasión por crear interfaces,
+                      experiencias y productos digitales que existen para algo más
+                      que verse bien. Diseño con propósito, curiosidad y un
+                      enfoque consciente sana por lo humano, lo interactivo y lo que deja
+                      huella.
+                    </Paragraph>
+          
+          
+          <Scroll>
+                    <StarIcon className="w-8 md:w-12" />
+                    </Scroll>
+          
+          
+                    <Paragraph variant="quote">
+                      <i>
+                        {" "}
+                        “Aunque mi fuerte es la comunicación visual, mi curiosidad
+                        por la programación me permite experimentar con la
+                        interactividad y transformar diseños estáticos en
+                        experiencias dinámicas.”
+                      </i>
+                    </Paragraph>
+                  
+                  </TwoColumnSection>
+          
+                </section>
+                <section id="proyectos">
+          
+                  <ContainerImages
+                    titulo={
+                      <>
+                        <i>Trabajos</i> <br /> destacados
+                      </>
+                    }
+                  >
 
-                  <StarIcon className="w-8 md:w-12" />
+                    <Scroll>
+          
+                    <CardProjects
+                      imagen={fotoProyecto1}
+                      descripcion="Catálogo web diseñado y desarrollado para un comercio de mercería, blanquería y lencería."
+                      etiqueta1="DISEÑO WEB"
+                      etiqueta2="DESARROLLO FRONTEND"
+                      link="/catalogo-web"
+                    />
+                    </Scroll>
+                    <Scroll>
+                    <CardProjects
+                      imagen={fotoProyecto2}
+                      descripcion="Proyecto personal de serie de pósters inspirado en la Fórmula 1."
+                      etiqueta1="DISEÑO GRÁFICO"
+                      link={"https://www.behance.net/gallery/231453491/FORMULA-1-POSTERS-DESIGNS"}
+                    />
+                    </Scroll>
+                    <Scroll>
+                    <CardProjects
+                      imagen={fotoProyecto3}
+                      descripcion="Rediseño del menú gastronómico y diseño de flyers para un local de comida rápida."
+                      etiqueta1="DISEÑO GRÁFICO"
+                      link={"https://www.behance.net/gallery/231033797/Restaurant-Menu-Flyer-Design"}
+                    />
+                    </Scroll>
+                    <Scroll>
+                    <CardProjects
+                      imagen={fotoProyecto4}
+                      descripcion="“El Fuego De Lo Perdido”. Videojuego de terror en primera persona, basado en el cuento “Las Cosas Que Perdimos En El Fuego” de Mariana Enriquez."
+                      etiqueta1="DESARROLLO DE VIDEOJUEGOS"
+                    />
+                    </Scroll>
+                  </ContainerImages>
+          
+                </section>
+              </main>
+            }
+          />
+        
 
-                  <Paragraph variant="quote">
-                    <i>
-                      {" "}
-                      “Aunque mi fuerte es la comunicación visual, mi curiosidad
-                      por la programación me permite experimentar con la
-                      interactividad y transformar diseños estáticos en
-                      experiencias dinámicas.”
-                    </i>
-                  </Paragraph>
-                </TwoColumnSection>
-              </section>
-
-              <section id="proyectos">
-                <ContainerImages
-                  titulo={
-                    <>
-                      <i>Trabajos</i> <br /> destacados
-                    </>
-                  }
-                >
-                  <CardProjects
-                    imagen={fotoProyecto1}
-                    descripcion="Catálogo web diseñado y desarrollado para un comercio de mercería, blanquería y lencería."
-                    etiqueta1="DISEÑO WEB"
-                    etiqueta2="DESARROLLO FRONTEND"
-                    link="/catalogo-web"
-                  />
-
-                  <CardProjects
-                    imagen={fotoProyecto2}
-                    descripcion="Proyecto personal de serie de pósters inspirado en la Fórmula 1."
-                    etiqueta1="DISEÑO GRÁFICO"
-                    link={"https://www.behance.net/gallery/231453491/FORMULA-1-POSTERS-DESIGNS"}
-                  />
-                  <CardProjects
-                    imagen={fotoProyecto3}
-                    descripcion="Rediseño del menú gastronómico y diseño de flyers para un local de comida rápida."
-                    etiqueta1="DISEÑO GRÁFICO"
-                    link={"https://www.behance.net/gallery/231033797/Restaurant-Menu-Flyer-Design"}
-                  />
-                  <CardProjects
-                    imagen={fotoProyecto4}
-                    descripcion="“El Fuego De Lo Perdido”. Videojuego de terror en primera persona, basado en el cuento “Las Cosas Que Perdimos En El Fuego” de Mariana Enriquez."
-                    etiqueta1="DESARROLLO DE VIDEOJUEGOS"
-                  />
-                </ContainerImages>
-              </section>
-            </main>
-          }
-        />
+        
 
         <Route path="/sobre-mi" element={<SobreMi />} />
         <Route path="/catalogo-web" element={<PaginaLenceriaProyecto />} />

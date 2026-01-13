@@ -1,5 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import SectionTitle from "./SectionTitle";
+import Scroll from "./Scroll";
 
 function TwoColumnSection({
   titulo,
@@ -12,6 +13,7 @@ function TwoColumnSection({
     <SectionWrapper>
       <div className="flex flex-col gap-12 md:flex-row justify-between items-start w-full md:gap-20 lg:gap-32">
         <div className="flex flex-col gap-20 justify-end md:w-2/5 shrink-0">
+        
           <div className="md:w-full">
             <SectionTitle subtitulo={subtituloProyectos}>{titulo}</SectionTitle>
           </div>

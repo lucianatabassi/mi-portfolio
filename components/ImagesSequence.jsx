@@ -1,5 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import SectionTitle from "./SectionTitle";
+import Scroll from "../components/Scroll";
 
 function ImagesSequence({ titulo, imagenes = [] }) {
   return (
@@ -11,11 +12,13 @@ function ImagesSequence({ titulo, imagenes = [] }) {
 
         {imagenes.map((img, index) => (
           <div key={index} className="flex w-full justify-center-safe">
+            <Scroll>
             <img
               src={img}
               alt={`Secuencia ${index + 1}`}
               className="w-4/5 h-auto object-cover"
             />
+             </Scroll>
           </div>
         ))}
       </div>

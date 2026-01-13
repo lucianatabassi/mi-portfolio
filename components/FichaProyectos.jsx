@@ -1,5 +1,6 @@
 import TwoColumnSection from "./TwoColumnSection";
 import StarIcon from "./StarIcon";
+import Scroll from "../components/Scroll";
 
 function FichaProyectos({
   children,
@@ -19,6 +20,8 @@ function FichaProyectos({
           - lg:flex: Recién en Desktop (Laptop) se pone horizontal.
           - gap-x-4: Un poco más de aire horizontal.
       */}
+
+      <Scroll>
       <div className="grid grid-cols-2 lg:flex lg:flex-row lg:items-center gap-y-6 gap-x-6 lg:gap-10 w-full">
  
         {/* ROL: Ocupa 2 columnas en móvil/tablet para tener espacio */}
@@ -53,6 +56,7 @@ function FichaProyectos({
         </div>
 
       </div>
+      </Scroll>
     </TwoColumnSection>
   );
 }

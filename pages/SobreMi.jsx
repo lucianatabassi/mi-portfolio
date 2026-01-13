@@ -2,6 +2,7 @@ import React from "react";
 import TwoColumnSection from "../components/TwoColumnSection";
 import Paragraph from "../components/Paragraph";
 import ContainerImages from "../components/ContainerImages";
+import Scroll from "../components/Scroll";
 
 import skill1 from "../assets/skill1.png";
 import skill2 from "../assets/skill2.png";
@@ -18,6 +19,10 @@ function SobreMi() {
           </>
         }
       >
+
+<Scroll>
+
+
         <Paragraph>
           Hola, soy Luciana Tabassi, Diseñadora Multimedial. <br />
           <br />
@@ -33,6 +38,7 @@ function SobreMi() {
           me permite “hablar ambos lenguajes”, asegurando que ninguna idea se
           pierda en la implementación y que el resultado final sea tan fiel al
           diseño. <br />
+          <br />
           Me enfocó en la resolución de problemas mediante soluciones de diseño
           centradas en el usuario, creando experiencias digitales que no solo
           sean visualmente atractivas, sino también intuitivas y funcionales.{" "}
@@ -43,12 +49,14 @@ function SobreMi() {
           tecnologías y conocimientos que me permitan resolver con éxito los
           desafíos del entorno digital actual.
         </Paragraph>
-
+</Scroll>
+<Scroll>
         <div className="py-3 md:py-10">
           <button className="w-1/2  text-lg border rounded-full  md:w-auto py-2 md:px-15 md:text-w-md">
             Curriculum
           </button>
         </div>
+        </Scroll>
       </TwoColumnSection>
 
       <ContainerImages
