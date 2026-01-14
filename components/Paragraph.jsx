@@ -2,7 +2,7 @@ import Scroll from "../components/Scroll";
 
 function Paragraph({ subtitulo, children, variant = "normal" }) {
 
-  const baseStyle = "py-8 font-sans leading-relaxed max-w-2xl flex flex-col gap-2 md:py-3 md:gap-3";
+  const baseStyle = "py-5 font-sans leading-relaxed max-w-2xl flex flex-col gap-2 md:py-3 md:gap-3";
 
   const styles = {
     normal: "font-regular text-base md:text-lg text-gray-200", 

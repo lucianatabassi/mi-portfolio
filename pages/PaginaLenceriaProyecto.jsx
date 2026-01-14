@@ -45,9 +45,14 @@ function PaginaLenceriaProyecto() {
 
       <ParrallaxSection>
         <FichaProyectos
-          tituloProyecto={<> Catálogo <i>Multirubro</i> </>}
+          tituloProyecto={
+            <>
+              {" "}
+              Juany <i>mercería, blanquería</i> y <i>lencería</i>{" "}
+            </>
+          }
           sobreProyecto={
-            "Unificación digital de tres rubros comerciales heterogéneos en una catálogo de consulta rápida"
+            "Unificación digital de tres rubros comerciales heterogéneos en un catálogo de consulta rápida"
           }
           rol={
             <>
@@ -61,15 +66,17 @@ function PaginaLenceriaProyecto() {
         <TwoColumnSection
           titulo={
             <>
-              Una <i>solución</i> digital para un <i>stock diverso</i>
+              Una <i>solución</i> digital <br /> para un <i>stock diverso</i>
             </>
           }
           imagen={screenPaginas}
         >
           <Paragraph subtitulo={"Desafío"}>
-            Crear un catálogo web integrando tres rubros (mercería, blanquería y
-            lencería) con diversas marcas, unificando el diseño bajo una misma
-            identidad.
+            Crear un catálogo web que integre tres rubros (mercería, blanquería
+            y lencería) con artículos de diversas marcas, unificando el diseño
+            bajo una misma identidad. Respetando la preferencia de la clienta
+            por el contacto directo a través de WhatsApp, evitando la
+            complejidad de un e-commerce tradicional.
           </Paragraph>
 
           <div className="hidden md:block">
@@ -77,24 +84,26 @@ function PaginaLenceriaProyecto() {
           </div>
 
           <Paragraph subtitulo={"Objetivos"}>
-            Mostrar el stock disponible de manera rápida y sencilla. Priorizando
-            el contacto directo vía WhatsApp, eliminando la complejidad de un
-            e-commerce tradicional para facilitar consultas personalizadas.
+            Mostrar el stock disponible de manera rápida y sencilla. Facilitando
+            las consultas personalizadas a través de WhatsApp y promoviendo una
+            atención directa con los vendedores.
           </Paragraph>
 
           <div className="hidden md:block">
-            <StarIcon className="w-4md:w-8" />
+            <StarIcon className="w-4 md:w-8" />
           </div>
 
           <Paragraph subtitulo={"Solución"}>
-            Interfaz minimalista que garantiza una navegación rápida para
-            personas de cualquier edad y desde cualquier dispositivo.
+            Desarrollo de una interfaz minimalista que garantiza una navegación
+            rápida e intuitiva para personas de cualquier edad y desde cualquier
+            dispositivo. Se incorpora un botón de consultas que redirige
+            directamente al WhatsApp del comercio.
           </Paragraph>
         </TwoColumnSection>
         <TwoColumnSection
           titulo={
             <>
-              La <i>claridad</i> por sobre la <i>saturación</i>
+              La <i>simplicidad</i> <br /> como <i>estrategia</i>
             </>
           }
         >
@@ -111,33 +120,34 @@ function PaginaLenceriaProyecto() {
             <StarIcon className="w-4 md:w-8" />
           </div>
 
-          <Paragraph subtitulo={"Decisión"}>
-            Implementar un diseño de baja fatiga cognitiva, simplificando la
-            estructura visual para que el contenido sea el protagonista.
+          <Paragraph subtitulo={"Estrategia"}>
+            Implementar un diseño pensado para una lectura rápida, simplificando
+            la estructura visual para que los artículos sean los protagonistas.
           </Paragraph>
         </TwoColumnSection>
         <DualImages imagen1={boceto1} imagen2={boceto2} />
         <TwoColumnSection
           titulo={
             <>
-              <i>Armonía visual</i> para marcas <i>heterogéneas</i>
+              <i>Calaridad visual</i> en <br /> un  <i>entorno diverso</i>
             </>
           }
         >
-          <Paragraph subtitulo={"Desafío"}>
-            Lograr cohesión visual entre imágenes de orígenes diversos.
+          <Paragraph subtitulo={"Desafío estético"}>
+            Lograr cohesión visual entre imágenes provenientes de distintas
+            marcas con estilos heterogéneos, de modo que mantengan coherencia
+            estética y claridad en la presentación de los productos.
           </Paragraph>
 
           <div className="hidden md:block">
             <StarIcon className="w-4  md:w-8" />
           </div>
 
-          <Paragraph subtitulo={"Estrategia"}>
-            Creé una jerarquía consistente con secciones claras, módulos
-            específicos y un menú con categorías claras. Con una paleta de
-            colores cohesiva para unificar la estética de marcas heterogéneas,
-            garantizando armonía visual en todo el catálogo y una tipografía de
-            alta legibilidad que reduzca la carga cognitiva.
+          <Paragraph subtitulo={"Estrategia visual"}>
+            Definí una jerarquía consistente a través de secciones claramente
+            diferenciadas, módulos específicos y un menú con categorías bien
+            estructuradas. Se utilizó una paleta de colores en tonalidades marrones que aporta calidez y coherencia visual, garantizando armonía visual en todo
+            el catálogo, junto con una tipografía de alta legibilidad que facilita la lectura.
           </Paragraph>
 
           <div className="hidden md:block">

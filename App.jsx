@@ -55,7 +55,7 @@ function App() {
                       de Argentina, con una gran pasión por crear interfaces,
                       experiencias y productos digitales que existen para algo más
                       que verse bien. Diseño con propósito, curiosidad y un
-                      enfoque consciente sana por lo humano, lo interactivo y lo que deja
+                      enfoque consciente por lo humano, lo interactivo y lo que deja
                       huella.
                     </Paragraph>
           

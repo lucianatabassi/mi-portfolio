@@ -4,10 +4,10 @@ import Paragraph from "../components/Paragraph";
 import ContainerImages from "../components/ContainerImages";
 import Scroll from "../components/Scroll";
 
-import skill1 from "../assets/skill1.png";
-import skill2 from "../assets/skill2.png";
-import skill3 from "../assets/skill3.png";
-import skill4 from "../assets/skill4.png";
+import skill1 from "../assets/skill1.svg";
+import skill2 from "../assets/skill2.svg";
+import skill3 from "../assets/skill3.svg";
+import skill4 from "../assets/skill4.svg";
 
 function SobreMi() {
   return (
@@ -24,18 +24,18 @@ function SobreMi() {
 
 
         <Paragraph>
-          Hola, soy Luciana Tabassi, Diseñadora Multimedial. <br />
+          Hola, soy Luciana Tabassi, Diseñadora Multimedial interdisciplinaria de Argentina. <br />
           <br />
           Mi enfoque combina la <i>creatividad</i> del diseño gráfico y la{" "}
-          <i>psicología</i> del diseño UX/UI. No solo diseño interfaces; me
-          apasiona <i>darles vida a través del código</i>. Entiendo el diseño no
+          <i>psicología</i> del diseño UX/UI. Entiendo el diseño no
           solo como algo que se ve, sino como algo que se siente y se vive.{" "}
+          De hecho, no solo diseño interfaces; me apasiona <i>darles vida a través del código</i>. 
           <br />
           <br />
           Aunque mi fuerte es la comunicación visual, mi curiosidad por la{" "}
           <i>programación</i> me permite experimentar con la interactividad y
           transformar diseños estáticos en <i>experiencias dinámicas</i>. Esto
-          me permite “hablar ambos lenguajes”, asegurando que ninguna idea se
+          me permite <i> “hablar ambos lenguajes”</i>, asegurando que ninguna idea se
           pierda en la implementación y que el resultado final sea tan fiel al
           diseño. <br />
           <br />
