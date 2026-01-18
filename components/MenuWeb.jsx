@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react"; // 1. Agregamos useEffect
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import StarIcon from "./StarIcon";
 
@@ -11,13 +11,29 @@ const MENU_ITEMS = [
 
 function MenuWeb() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // 2. Nuevo estado para el scroll
 
   const location = useLocation();
   const navigate = useNavigate();
 
+  // 3. Lógica para detectar el scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si bajamos más de 50px, activamos el estado
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleNavigation = (e, path) => {
-    e.preventDefault(); // Evitamos comportamiento por defecto
-    setIsOpen(false); // Cerramos menú móvil
+    e.preventDefault();
+    setIsOpen(false);
 
     if (path.startsWith("#")) {
       const id = path.replace("#", "");
@@ -36,14 +52,23 @@ function MenuWeb() {
       }
     } else {
       navigate(path);
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Siempre subir al inicio al cambiar página
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full px-10 md:pt-5 md:pb-5 md:px-20 z-50 flex justify-end 
-  md:backdrop-blur-md bg-gradient-to-w from-[#00000F]/30  to-transparent"
+      // 4. Clases dinámicas en el nav
+      // Agregamos 'transition-all duration-300' para que el cambio sea suave
+      className={`
+        fixed top-0 left-0 w-full px-10 md:pt-5 md:pb-5 md:px-20 z-50 flex justify-end 
+        transition-all duration-500 ease-in-out
+        ${
+          isScrolled
+            ? "md:backdrop-blur-md bg-[#00000F]/40 shadow-sm" // ESTILO AL SCROLLEAR (Blur + Fondo semitransparente)
+            : "bg-transparent" // ESTILO AL INICIO (Totalmente transparente)
+        }
+      `}
     >
       {/*menu hamburguesa */}
       <button
@@ -59,7 +84,7 @@ function MenuWeb() {
         flex gap-10 items-center
         ${
           isOpen
-            ? "absolute right-0 flex-col bg-[#00000F] p-10 w-full"
+            ? "absolute right-0 flex-col bg-[#00000F] p-10 w-full top-0" // Agregué top-0 para asegurar posición en mobile
             : "hidden md:flex"
         } 
       `}

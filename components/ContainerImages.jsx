@@ -11,43 +11,35 @@ function ContainerImages({
   imagen4,
   imagen5,
   imagen6,
-  imagen7
+  imagen7,
 }) {
-
   return (
     <div>
       <SectionWrapper>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 items-start">
+          <Scroll>
+            <div className="md:grid-rows-1">
+              <SectionTitle>{titulo}</SectionTitle>
+            </div>
+          </Scroll>
+          {children}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 items-start">
-        
-<Scroll>
-        <div className="md:grid-rows-1">
-          <SectionTitle>{titulo}</SectionTitle>
+          {[imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7].map(
+            (img, index) =>
+              img && (
+                <Scroll>
+                  <img
+                    key={index}
+                    src={img}
+                    alt=""
+                    className="w-full h-auto object-cover"
+                  />
+                </Scroll>
+              ),
+          )}
         </div>
-</Scroll>
-        {children}
-
-       
-        {[imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7].map(
-          (img, index) => 
-            img && (
-               <Scroll>
-              <img 
-                key={index} 
-                src={img} 
-                alt="" 
-                className="w-full h-auto object-cover" 
-              />
-              </Scroll>
-            )
-        )}
-        
-      </div>
       </SectionWrapper>
-      
     </div>
-      
-    
   );
 }
 

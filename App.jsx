@@ -12,12 +12,15 @@ import CardProjects from "./components/CardProjects";
 import Footer from "./components/Footer";
 import StarIcon from "./components/StarIcon";
 import Scroll from "./components/Scroll";
+import ParrallaxSection from "./components/ParrallaxSection";
+import CoverImage from "./components/CoverImage";
 
 import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
 import fotoProyecto3 from "./assets/Mask group3.png";
 import fotoProyecto4 from "./assets/Mask group4.png";
-import portada from "./assets/portada.png";
+import portada from "./assets/gif-logo-portfolio3.gif";
+
 
 function App() {
   return (
@@ -33,11 +36,12 @@ function App() {
             element={
               <main className="flex flex-col gap-30">
                 <header>
-                  <div className="flex py-20 px-6 md:pb-20 justify-center">
-                    <img src={portada} alt="" className="w-full md:w-3/5 h-auto object-cover" />
-                  </div>
+                  <CoverImage portada={portada} />
+                  
                 </header>
-                <section className="w-full">
+
+                <ParrallaxSection>
+                   <section className="w-full">
           
           
                   <TwoColumnSection
@@ -114,16 +118,18 @@ function App() {
                       link={"https://www.behance.net/gallery/231033797/Restaurant-Menu-Flyer-Design"}
                     />
                     </Scroll>
-                    <Scroll>
+             {/*       <Scroll>
                     <CardProjects
                       imagen={fotoProyecto4}
                       descripcion="“El Fuego De Lo Perdido”. Videojuego de terror en primera persona, basado en el cuento “Las Cosas Que Perdimos En El Fuego” de Mariana Enriquez."
                       etiqueta1="DESARROLLO DE VIDEOJUEGOS"
                     />
-                    </Scroll>
+                    </Scroll> */}
                   </ContainerImages>
           
                 </section>
+                </ParrallaxSection>
+               
               </main>
             }
           />

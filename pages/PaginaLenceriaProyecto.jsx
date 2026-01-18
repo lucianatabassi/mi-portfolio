@@ -7,6 +7,8 @@ import Paragraph from "../components/Paragraph";
 import ImagesSequence from "../components/ImagesSequence";
 import DualImages from "../components/DualImages";
 import ParrallaxSection from "../components/ParrallaxSection";
+import FullImage from "../components/FullImage";
+import Video from "../components/Video";
 import StarIcon from "../components/StarIcon";
 
 import ProyectoPortada from "../assets/01 Free Macbook Pro Mockup On Round Podium copia.jpg";
@@ -21,6 +23,7 @@ import mobile4 from "../assets/4.png";
 import mobile5 from "../assets/5.png";
 import mobile6 from "../assets/6.png";
 import mobile7 from "../assets/7.png";
+import videoLenceria from "/videos/Figma_U80SFSNhIJ.mp4";
 
 function PaginaLenceriaProyecto() {
   const listaScreens = [
@@ -69,7 +72,6 @@ function PaginaLenceriaProyecto() {
               Una <i>solución</i> digital <br /> para un <i>stock diverso</i>
             </>
           }
-          imagen={screenPaginas}
         >
           <Paragraph subtitulo={"Desafío"}>
             Crear un catálogo web que integre tres rubros (mercería, blanquería
@@ -100,6 +102,8 @@ function PaginaLenceriaProyecto() {
             directamente al WhatsApp del comercio.
           </Paragraph>
         </TwoColumnSection>
+        <FullImage imagenFull={screenPaginas} />
+
         <TwoColumnSection
           titulo={
             <>
@@ -129,7 +133,7 @@ function PaginaLenceriaProyecto() {
         <TwoColumnSection
           titulo={
             <>
-              <i>Calaridad visual</i> en <br /> un  <i>entorno diverso</i>
+              <i>Calaridad visual</i> en <br /> un <i>entorno diverso</i>
             </>
           }
         >
@@ -146,8 +150,10 @@ function PaginaLenceriaProyecto() {
           <Paragraph subtitulo={"Estrategia visual"}>
             Definí una jerarquía consistente a través de secciones claramente
             diferenciadas, módulos específicos y un menú con categorías bien
-            estructuradas. Se utilizó una paleta de colores en tonalidades marrones que aporta calidez y coherencia visual, garantizando armonía visual en todo
-            el catálogo, junto con una tipografía de alta legibilidad que facilita la lectura.
+            estructuradas. Se utilizó una paleta de colores en tonalidades
+            marrones que aporta calidez y coherencia visual, garantizando
+            armonía visual en todo el catálogo, junto con una tipografía de alta
+            legibilidad que facilita la lectura.
           </Paragraph>
 
           <div className="hidden md:block">
@@ -160,6 +166,8 @@ function PaginaLenceriaProyecto() {
           </Paragraph>
         </TwoColumnSection>
 
+        <Video videoProyecto={{ src: videoLenceria, type: "video/mp4" }} />
+
         <ImagesSequence
           titulo={
             <>
@@ -168,6 +176,31 @@ function PaginaLenceriaProyecto() {
           }
           imagenes={listaScreens}
         ></ImagesSequence>
+
+        <TwoColumnSection
+          titulo={
+            <>
+               <i>Reflexiones</i> finales
+            </>
+          }
+        >
+          <Paragraph subtitulo={"Aprendizaje"}>
+            Este fue mi primer proyecto de desarrollo web y representó el desafío de traducir conceptos visuales en código funcional. Opté por trabajar con HTML y CSS puro para consolidar mis bases técnicas antes de dar el salto a herramientas más avanzadas. <br/>
+            <br/>
+            Finalizar este proyecto fue un punto de inflexión. Me impulso a adoptar herramientas más eficientes e integradas a los estandares actuales. <br/>
+            El resultado final presenta ajustes respecto al prototipo inicial, para adaptarse mejor al contenido real y a las necesidades específicas que surgieron con la clienta. <br/>
+            <br/>
+            Actualmente, la estructura está finalizada, aunque planeo retormar el proyecto para optimizar su funcionamiento, y el despliegue de contenido se encuentra en etapa  de coordinación. <br/>
+            <br/>
+            [Ver sitio en vivo: <a href="https://juany-lenceria-merceria-y-blanqueria.vercel.app/index.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Juany Mercería, Blanquería y Lencería</a>] <br/>
+             <br/>
+            Muchas gracias por ver!
+
+
+          </Paragraph>
+
+        
+        </TwoColumnSection>
       </ParrallaxSection>
     </div>
   );
