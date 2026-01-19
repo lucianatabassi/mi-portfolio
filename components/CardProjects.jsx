@@ -6,11 +6,11 @@ function CardProjects({ imagen, descripcion, etiqueta1, etiqueta2, link }) {
 
   const cardContent = (
     <div className="flex flex-col gap-4">
-      <div className="overflow-hidden rounded-xl">
+      <div className="overflow-hidden rounded-3xl">
         <img
           src={imagen}
           alt=""
-          className={"w-full h-auto object-cover transition-transform duration-500 ease-in-out  hover:scale-103"
+          className={"w-full h-auto object-cover transition-transform duration-500 ease-in-out   hover:scale-103"
           }
         />
       </div>
