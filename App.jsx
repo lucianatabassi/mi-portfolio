@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+
 import SobreMi from "./pages/SobreMi";
 import PaginaLenceriaProyecto from "./pages/PaginaLenceriaProyecto";
 import "./index.css";
@@ -14,17 +15,29 @@ import StarIcon from "./components/StarIcon";
 import Scroll from "./components/Scroll";
 import ParrallaxSection from "./components/ParrallaxSection";
 import CoverImage from "./components/CoverImage";
+import { ShaderGradientComponent} from "./components/ShaderGradientComponent";
 
 import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
 import fotoProyecto3 from "./assets/Mask group3.png";
 import fotoProyecto4 from "./assets/Mask group4.png";
-import portada from "./assets/gif-logo-portfolio7.gif";
+import portada from "./assets/0001.png";
 
 function App() {
   return (
     <div className="flex flex-col md:min-h-screen w-full">
       <nav>
+        <div className="absolute inset-0  flex flex-col justify-end items-start z-0 pointer-events-none md: p-10  ">
+          <span className="text-white/80 uppercase tracking-widest text-lg">
+            LUCIANA TABASSI
+          </span>
+          <span className="text-white/80 uppercase font-semibold tracking-widest text-lg">
+            multimedial design &
+          </span>
+          <span className="text-white/80 uppercase font-semibold tracking-widest text-lg">
+            PRODUCT DESIGN
+          </span>
+        </div>
         <MenuWeb />
       </nav>
 
@@ -33,22 +46,9 @@ function App() {
           path="/"
           element={
             <main className="flex flex-col gap-30">
-              <header className="relative">
+              <header className="relative ">
                 <CoverImage portada={portada} />
-
-                <div
-                  className="absolute inset-0  flex flex-col justify-start items-start z-0 pointer-events-none md: p-10  "
-                >
-                  <span className="text-white/80 uppercase tracking-widest text-lg">
-                    LUCIANA TABASSI
-                  </span>
-                  <span className="text-white/80 uppercase font-semibold tracking-widest text-lg">
-                    multimedial design &
-                  </span>
-                  <span className="text-white/80 uppercase font-semibold tracking-widest text-lg">
-                    PRODUCT DESIGN
-                  </span>
-                </div>
+                <ShaderGradientComponent/>
               </header>
 
               <ParrallaxSection>
@@ -119,13 +119,14 @@ function App() {
                         }
                       />
                     </Scroll>
-                    {/*       <Scroll>
-                    <CardProjects
-                      imagen={fotoProyecto4}
-                      descripcion="“El Fuego De Lo Perdido”. Videojuego de terror en primera persona, basado en el cuento “Las Cosas Que Perdimos En El Fuego” de Mariana Enriquez."
-                      etiqueta1="DESARROLLO DE VIDEOJUEGOS"
-                    />
-                    </Scroll> */}
+                    <Scroll>
+                      <CardProjects
+                        imagen={fotoProyecto4}
+                        descripcion="Widget de escritorio que muestra información sobre las próximas carreras de Fórmula 1, incluyendo telemetría en tiempo real."
+                        etiqueta1="DISEÑO UX/UI"
+                        etiqueta2="DESARROLLO FRONTEND"
+                      />
+                    </Scroll>
                   </ContainerImages>
                 </section>
               </ParrallaxSection>

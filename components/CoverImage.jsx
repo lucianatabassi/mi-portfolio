@@ -5,7 +5,7 @@ function CoverImage({ portada }) {
     // debe "reservar" el espacio físico con la misma altura que la imagen fija.
     <div className="w-full h-[60vh] md:h-[100vh]">
       
-      <div className="fixed top-0 left-0 w-full h-[60vh] md:h-[100vh] -z-10">
+      <div className="fixed top-0 left-0 w-full h-[60vh] md:h-[100vh] -z-1">
         <img
           src={portada}
           alt=""

@@ -15,7 +15,7 @@ function SobreMi() {
       <TwoColumnSection
         titulo={
           <>
-            <i>Diseñadora multimedial</i> interdisciplinaria
+            Diseño <i>experiencias</i> que <i>se sienten</i>, se usan y <i>se viven</i>
           </>
         }
       >
