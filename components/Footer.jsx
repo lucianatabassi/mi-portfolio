@@ -42,9 +42,9 @@ function Footer() {
             </a>
           </div>
 
-          <p>Desarrollado por mi en React &lt;3</p>
+          <p>Desarrollado con React &lt;3</p>
 
-          <p>© 2025 Luciana Tabassi</p>
+          <p>© 2026 Luciana Tabassi</p>
         </div>
       </SectionWrapper>
     </footer>

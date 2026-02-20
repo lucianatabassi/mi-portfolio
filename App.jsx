@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-
 import SobreMi from "./pages/SobreMi";
 import PaginaLenceriaProyecto from "./pages/PaginaLenceriaProyecto";
 import "./index.css";
@@ -15,7 +14,7 @@ import StarIcon from "./components/StarIcon";
 import Scroll from "./components/Scroll";
 import ParrallaxSection from "./components/ParrallaxSection";
 import CoverImage from "./components/CoverImage";
-import { ShaderGradientComponent} from "./components/ShaderGradientComponent";
+import { ShaderGradientComponent } from "./components/ShaderGradientComponent";
 
 import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
@@ -27,17 +26,6 @@ function App() {
   return (
     <div className="flex flex-col md:min-h-screen w-full">
       <nav>
-        <div className="absolute inset-0  flex flex-col justify-end items-start z-0 pointer-events-none md: p-10  ">
-          <span className="text-white/80 uppercase tracking-widest text-lg">
-            LUCIANA TABASSI
-          </span>
-          <span className="text-white/80 uppercase font-semibold tracking-widest text-lg">
-            multimedial design &
-          </span>
-          <span className="text-white/80 uppercase font-semibold tracking-widest text-lg">
-            PRODUCT DESIGN
-          </span>
-        </div>
         <MenuWeb />
       </nav>
 
@@ -47,8 +35,19 @@ function App() {
           element={
             <main className="flex flex-col gap-30">
               <header className="relative ">
-                <CoverImage portada={portada} />
-                <ShaderGradientComponent/>
+                {/* <CoverImage portada={portada} />*/}
+                <div className="absolute inset-0 flex flex-col justify-center items-center z-0 pointer-events-none md: p-20">
+                  <span className="font-serif font-medium text-white/80 text-5xl">
+                    Luciana Tabassi
+                  </span>
+                  <span className="font-serif text-white/80  font-semibold text-5xl">
+                    multimedial design &
+                  </span>
+                  <span className="font-serif text-white/80 font-semibold text-5xl">
+                    product design
+                  </span>
+                </div>
+                <ShaderGradientComponent />
               </header>
 
               <ParrallaxSection>
