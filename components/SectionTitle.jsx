@@ -5,7 +5,7 @@ function SectionTitle({ children, subtitulo, className = "" }) {
   return (
     <div className="w-fit">
       <Scroll>
-      <h2 className={`font-sans font-medium text-4xl md:text-5xl leading-none ${className}`}>
+      <h2 className={`font-sans font-medium text-4xl md:text-6xl leading-none ${className}`}>
       {children}
     </h2>
       </Scroll>

@@ -20,7 +20,7 @@ import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
 import fotoProyecto3 from "./assets/Mask group3.png";
 import fotoProyecto4 from "./assets/Mask group4.png";
-import portada from "./assets/0001.png";
+import portada from "./assets/Group 2276.svg";
 
 function App() {
   return (
@@ -35,18 +35,19 @@ function App() {
           element={
             <main className="flex flex-col gap-30">
               <header className="relative ">
-                {/* <CoverImage portada={portada} />*/}
-                <div className="absolute inset-0 flex flex-col justify-center items-center z-0 pointer-events-none md: p-20">
-                  <span className="font-serif font-medium text-white/80 text-5xl">
-                    Luciana Tabassi
+                 <CoverImage portada={portada} />
+             { /*   <div className="absolute inset-0 flex flex-col justify-center items-start z-0 pointer-events-none md: p-20">
+                 <span className="font-serif font-regular text-white/80 text-3xl">
+                   <i>Hola! soy Luciana,</i> 
                   </span>
-                  <span className="font-serif text-white/80  font-semibold text-5xl">
-                    multimedial design &
+                  <span className="font-sans text-white/90  font-semibold text-7xl">
+                    product designer <i>&</i>
                   </span>
-                  <span className="font-serif text-white/80 font-semibold text-5xl">
-                    product design
+                  <span className="font-sans text-white/90 font-semibold text-7xl">
+                    diseñadora multimedial
                   </span>
-                </div>
+                  
+                </div>*/}
                 <ShaderGradientComponent />
               </header>
 
@@ -60,12 +61,7 @@ function App() {
                     }
                   >
                     <Paragraph>
-                      Soy Luciana, una diseñadora multimedial interdisciplinaria
-                      de Argentina, con una gran pasión por crear interfaces,
-                      experiencias y productos digitales que existen para algo
-                      más que verse bien. Diseño con propósito, curiosidad y un
-                      enfoque consciente por lo humano, lo interactivo y lo que
-                      deja huella.
+                      Creo interfaces, experiencias y productos digitales que existen para algo más que verse bien.
                     </Paragraph>
 
                     <Scroll>

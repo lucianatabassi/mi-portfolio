@@ -2,7 +2,7 @@ import { ShaderGradientCanvas, ShaderGradient } from "shadergradient";
 
 export const ShaderGradientComponent = () => {
   return (
-    <div className="w-full h-[60vh] md:h-[100vh]">
+    <div className="w-full h-[60vh] md:h-auto">
       <ShaderGradientCanvas
         style={{
           position: "fixed",

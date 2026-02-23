@@ -6,7 +6,7 @@ function Paragraph({ subtitulo, children, variant = "normal" }) {
 
   const styles = {
     normal: "font-regular text-base md:text-lg text-gray-200", 
-    quote: "text-xl md:text-3xl font-semibold italic", 
+    quote: "text-xl md:text-3xl font-medium", 
   };
   return (
     <Scroll>
