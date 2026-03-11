@@ -34,49 +34,26 @@ function App() {
           path="/"
           element={
             <main className="flex flex-col gap-30">
-              <header className="relative ">
-                 <CoverImage portada={portada} />
-             { /*   <div className="absolute inset-0 flex flex-col justify-center items-start z-0 pointer-events-none md: p-20">
+              <header className="relative w-full h-[60vh] md:h-[100vh]">
+              {/*  <CoverImage portada={portada} />*/} 
+                <div className=" absolute inset-0 flex flex-col justify-center items-start z-0 pointer-events-none md: p-20">
                  <span className="font-serif font-regular text-white/80 text-3xl">
-                   <i>Hola! soy Luciana,</i> 
+                   Soy Luciana,
+                  </span>          
+                  <span className="font-sans text-white/90 font-semibold text-7xl">
+                    una <i>diseñadora multimedial</i>
                   </span>
                   <span className="font-sans text-white/90  font-semibold text-7xl">
-                    product designer <i>&</i>
+                   enfocada en el desarrollo de <i>productos digitales</i> que existen para algo más que verse bien
                   </span>
-                  <span className="font-sans text-white/90 font-semibold text-7xl">
-                    diseñadora multimedial
-                  </span>
+                 
                   
-                </div>*/}
+                </div>
                 <ShaderGradientComponent />
               </header>
 
               <ParrallaxSection>
-                <section className="w-full">
-                  <TwoColumnSection
-                    titulo={
-                      <>
-                        Sobre <i>mí</i>
-                      </>
-                    }
-                  >
-                    <Paragraph>
-                      Creo interfaces, experiencias y productos digitales que existen para algo más que verse bien.
-                    </Paragraph>
-
-                    <Scroll>
-                      <StarIcon className="w-8 md:w-12" />
-                    </Scroll>
-
-                    <Paragraph variant="quote">
-                      {" "}
-                      “Aunque mi fuerte es la <i>comunicación visual</i>, mi{" "}
-                      <i>curiosidad</i> por la <i>programación</i> me permite
-                      experimentar con la interactividad y transformar diseños
-                      estáticos en experiencias dinámicas.”
-                    </Paragraph>
-                  </TwoColumnSection>
-                </section>
+               
                 <section id="proyectos">
                   <ContainerImages
                     titulo={
@@ -88,7 +65,8 @@ function App() {
                     <Scroll>
                       <CardProjects
                         imagen={fotoProyecto1}
-                        descripcion="Catálogo web diseñado y desarrollado para un comercio de mercería, blanquería y lencería."
+                        descripcion="Catálogo Web"
+                        año="2025"
                         etiqueta1="DISEÑO WEB"
                         etiqueta2="DESARROLLO FRONTEND"
                         link="/catalogo-web"
@@ -97,7 +75,8 @@ function App() {
                     <Scroll>
                       <CardProjects
                         imagen={fotoProyecto2}
-                        descripcion="Proyecto personal de serie de pósters inspirado en la Fórmula 1."
+                        descripcion="Posters Fórmula 1"
+                        año="2025"
                         etiqueta1="DISEÑO GRÁFICO"
                         link={
                           "https://www.behance.net/gallery/231453491/FORMULA-1-POSTERS-DESIGNS"
@@ -107,7 +86,8 @@ function App() {
                     <Scroll>
                       <CardProjects
                         imagen={fotoProyecto3}
-                        descripcion="Rediseño del menú gastronómico y diseño de flyers para un local de comida rápida."
+                        descripcion="Rediseño Menú Gastronómico"
+                        año="2024"
                         etiqueta1="DISEÑO GRÁFICO"
                         link={
                           "https://www.behance.net/gallery/231033797/Restaurant-Menu-Flyer-Design"
@@ -117,14 +97,27 @@ function App() {
                     <Scroll>
                       <CardProjects
                         imagen={fotoProyecto4}
-                        descripcion="Widget de escritorio que muestra información sobre las próximas carreras de Fórmula 1, incluyendo telemetría en tiempo real."
+                        descripcion="Calendario Fórmula 1"
+                        año="2026"
                         etiqueta1="DISEÑO UX/UI"
                         etiqueta2="DESARROLLO FRONTEND"
                       />
                     </Scroll>
                   </ContainerImages>
                 </section>
-              </ParrallaxSection>
+
+                <div className="flex flex-col justify-center items-center text-center w-full mt-20 pt-50 border-t border-gray-800 ">
+                  <StarIcon className="w-5 md:w-8" />
+                  <Paragraph variant="quote">
+                   ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi
+                      curiosidad por la <i>programación</i> me permite
+                      experimentar con la interactividad y transformar diseños
+                      estáticos en experiencias dinámicas.❞</Paragraph>
+                       <StarIcon className="w-5 md:w-8" />
+                </div>
+             
+
+                 </ParrallaxSection>
             </main>
           }
         />

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-function CardProjects({ imagen, descripcion, etiqueta1, etiqueta2, link }) {
+function CardProjects({ imagen, descripcion, año, etiqueta1, etiqueta2, link }) {
   const isExternal =
     link && (link.startsWith("http://") || link.startsWith("https://"));
 
   const cardContent = (
     <div className="flex flex-col gap-4">
-      <div className="overflow-hidden rounded-3xl">
+      <div className="overflow-hidden rounded-lg">
         <img
           src={imagen}
           alt=""
@@ -15,9 +15,13 @@ function CardProjects({ imagen, descripcion, etiqueta1, etiqueta2, link }) {
         />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <p className="text-sm md:text-base text-gray-200">{descripcion}</p>
-        <div className="flex flex-wrap gap-2 mt-1">
+      <div className="flex flex-col gap-2 px-2">
+        <div className="flex flex-wrap justify-between items-center">
+          <p className="text-sm font-semibold pt-3 md:text-xl text-base uppercase">{descripcion}</p>
+          <span className="text-md text-gray-300">{año}</span>
+        </div>
+        
+        <div className="flex flex-wrap gap-2 mt-3">
           <span className="border border-white/30 px-3 py-1 text-xs rounded-full text-gray-300">
             {etiqueta1}
           </span>

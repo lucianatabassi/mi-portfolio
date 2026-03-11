@@ -61,7 +61,7 @@ function MenuWeb() {
       // 4. Clases dinámicas en el nav
       // Agregamos 'transition-all duration-300' para que el cambio sea suave
       className={`
-        fixed top-0 left-0 w-full px-10 md:pt-5 md:pb-5 md:px-20 z-50 flex justify-end 
+        fixed top-0 left-0 w-full px-10 md:pt-5 md:pb-5 md:px-20 z-50 flex items-center justify-between
         transition-all duration-500 ease-in-out
         ${
           isScrolled
@@ -70,6 +70,12 @@ function MenuWeb() {
         }
       `}
     >
+       <a   href="/"
+        onClick={(e) => handleNavigation(e, "/")}
+        className="text-white text-xs tracking-widest font-medium uppercase"
+      >
+        LT
+      </a>
       {/*menu hamburguesa */}
       <button
         onClick={() => setIsOpen(!isOpen)}

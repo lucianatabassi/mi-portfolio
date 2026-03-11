@@ -16,7 +16,7 @@ function ContainerImages({
   return (
     <div>
       <SectionWrapper>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-15 items-start">
           <Scroll>
             <div className="md:grid-rows-1">
               <SectionTitle>{titulo}</SectionTitle>

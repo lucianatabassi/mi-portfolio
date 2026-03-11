@@ -1,8 +1,8 @@
-import starImg from '../assets/estrella.png'; 
+import starImg from '../assets/Recurso 2 copia.png'; 
 
 function StarIcon({ className = "", size = "w-6" }) {
   return (
-    <div className="flex flex-col items-center py-15 md:py-15">
+    <div className="flex flex-col items-center py-15 md:py-10">
       <img 
       src={starImg} 
       alt="Estrella decorativa"

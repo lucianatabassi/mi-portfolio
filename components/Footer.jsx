@@ -6,9 +6,9 @@ function Footer() {
   return (
     <footer className="w-full bg-[#00000F]">
       <SectionWrapper>
-        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-center md:mb-40 gap-10">
+        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-center md:mb-40 gap-10 pt-50 border-t border-gray-800">
           <Scroll>
-            <h2 className="text-6xl md:text-9xl font-serif leading-tighter tracking-tighter">
+            <h2 className="text-6xl md:text-8xl font-serif leading-tighter tracking-tighter">
               <span>
                 {" "}
                 <i>Trabajemos</i>
@@ -16,13 +16,13 @@ function Footer() {
               <br />
               <div className="flex gap-4">
                 <p>juntos</p>
-                <StarIcon className="w-15 md:w-30" />
+                <StarIcon className="w-15 md:w-15" />
               </div>
             </h2>
           </Scroll>
 
           <Scroll>
-            <button className="w-full px-6 py-4 text-xl border rounded-full  md:w-auto px-10 py-4 md:text-4xl">
+            <button className="w-full px-6 py-4 text-xl border rounded-xl  md:w-auto px-20 py-4 md:text-2xl">
               <a href=""> Contacto</a>
              
             </button>
