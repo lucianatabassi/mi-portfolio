@@ -22,8 +22,8 @@ export const ShaderGradientComponent = () => {
   cDistance={2.81}
   cPolarAngle={80}
   cameraZoom={15}
-  color1="#190055"
-  color2="#040463"
+  color1="#12013b"
+  color2="#010131"
   color3="#00000F"
   destination="onCanvas"
   embedMode="off"

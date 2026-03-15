@@ -14,6 +14,7 @@ import StarIcon from "./components/StarIcon";
 import Scroll from "./components/Scroll";
 import ParrallaxSection from "./components/ParrallaxSection";
 import CoverImage from "./components/CoverImage";
+import MiHeader from "./components/MiHeader";
 import { ShaderGradientComponent } from "./components/ShaderGradientComponent";
 
 import fotoProyecto1 from "./assets/Mask group.png";
@@ -34,26 +35,11 @@ function App() {
           path="/"
           element={
             <main className="flex flex-col gap-30">
-              <header className="relative w-full h-[60vh] md:h-[100vh]">
-              {/*  <CoverImage portada={portada} />*/} 
-                <div className=" absolute inset-0 flex flex-col justify-center items-start z-0 pointer-events-none md: p-20">
-                 <span className="font-serif font-regular text-white/80 text-3xl">
-                   Soy Luciana,
-                  </span>          
-                  <span className="font-sans text-white/90 font-semibold text-7xl">
-                    una <i>diseñadora multimedial</i>
-                  </span>
-                  <span className="font-sans text-white/90  font-semibold text-7xl">
-                   enfocada en el desarrollo de <i>productos digitales</i> que existen para algo más que verse bien
-                  </span>
-                 
-                  
-                </div>
-                <ShaderGradientComponent />
+              <header>
+                <MiHeader />
               </header>
 
               <ParrallaxSection>
-               
                 <section id="proyectos">
                   <ContainerImages
                     titulo={
@@ -109,15 +95,14 @@ function App() {
                 <div className="flex flex-col justify-center items-center text-center w-full mt-20 pt-50 border-t border-gray-800 ">
                   <StarIcon className="w-5 md:w-8" />
                   <Paragraph variant="quote">
-                   ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi
-                      curiosidad por la <i>programación</i> me permite
-                      experimentar con la interactividad y transformar diseños
-                      estáticos en experiencias dinámicas.❞</Paragraph>
-                       <StarIcon className="w-5 md:w-8" />
+                    ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi curiosidad
+                    por la <i>programación</i> me permite experimentar con la
+                    interactividad y transformar diseños estáticos en
+                    experiencias dinámicas.❞
+                  </Paragraph>
+                  <StarIcon className="w-5 md:w-8" />
                 </div>
-             
-
-                 </ParrallaxSection>
+              </ParrallaxSection>
             </main>
           }
         />

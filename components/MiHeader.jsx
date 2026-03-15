@@ -1,63 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import { ShaderGradientComponent } from "../components/ShaderGradientComponent";
+import StarIcon from "../components/StarIcon";
 
 export default function MiHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [textScale, setTextScale] = useState(1);
+  const [headerHeight, setHeaderHeight] = useState(100);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Usamos window.innerHeight para que el cambio ocurra 
-      // cuando el usuario haya scrolleado la mitad de su pantalla
-      if (window.scrollY > window.innerHeight / 2) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        
+        const newScale = Math.max(0.50, 1 - scrollY / 1500);
+        setTextScale(newScale);
+
+        const newHeaderHeight = Math.max(50, 100 - scrollY / 15);
+        setHeaderHeight(newHeaderHeight);
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-   
-    <header className="relative w-full h-[200vh]">
+    // 1. EL TRUCO: Definimos la altura base aquí (60vh móvil, 80vh desktop) 
+    // y creamos una variable CSS personalizada [--base-vh] para que React la lea.
+    <div className="relative w-full h-[60vh] md:h-[60vh] [--base-vh:60vh] md:[--base-vh:60vh]">
       
-      {/* 2. CONTENEDOR STICKY: Se pega al techo (top-0) y ocupa toda la pantalla (h-screen). 
-           Se quedará fijo hasta que el usuario termine de scrollear los 200vh de arriba. */}
-      <div className="sticky top-0 w-full h-screen overflow-hidden">
+      <header 
+        className="fixed top-0 left-0 w-full overflow-hidden flex items-center justify-center -z-10"
+        style={{ 
+          // 2. Multiplicamos nuestra altura base por el porcentaje de scroll (ej: 80vh * 0.90)
+          height: `calc(var(--base-vh) * ${headerHeight / 100})`, 
+        }}
+      >
         
-        {/* Capa de Texto */}
-        <div className="absolute inset-0 flex flex-col justify-center items-start z-10 pointer-events-none p-6 md:p-20">
-          {isScrolled ? (
-            // --- TEXTO AL SCROLLEAR ---
-            <div className="animate-fade-in flex flex-col transition-opacity duration-500">
-                 <span className="font-sans text-white/90 font-semibold text-7xl">
-               Me enfoco en crear interfaces, experiencias y productos digitales que existen para algo más que verse bien
-              </span>
-            </div>
-          ) : (
-            // --- TEXTO ORIGINAL ---
-            <div className="animate-fade-in flex flex-col transition-opacity duration-500">
-              <span className="font-serif font-regular text-white/80 text-3xl">
-                Soy Luciana,
-              </span>
-              <span className="font-sans text-white/90 font-semibold text-7xl">
-                product designer <i>&</i>
-              </span>
-              <span className="font-sans text-white/90 font-semibold text-7xl">
-                diseñadora multimedial
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Capa de Fondo (Shader) */}
+        {/* --- FONDO (SHADER) --- */}
         <div className="absolute inset-0 z-0">
-          <ShaderGradientComponent /> 
+          <ShaderGradientComponent />
         </div>
 
-      </div>
-    </header>
+        <div className="absolute inset-0 flex flex-col justify-center items-start z-10 pointer-events-none p-6 md:p-20 md:pt-50 text-left">
+          <div 
+            style={{ 
+              transform: `scale(${textScale})`, 
+              // Vuelvo a poner 'left center' aquí para que al achicarse no se vaya al medio
+              transformOrigin: 'center', 
+            }}
+            className="flex flex-col items-start"
+          >
+            <span className="font-serif font-regular text-white/80 text-lg md:text-3xl mb-2">
+              Soy Luciana,
+            </span>
+            <div className="flex flex-row items-end justify-start">
+              <span className="font-sans text-white/90 font-semibold text-lg md:text-7xl">
+                una <i>diseñadora multimedial</i> enfocada en el
+                desarrollo de <i>productos digitales</i> que existen
+                para algo más que verse bien
+              </span>
+              <StarIcon className="w-5 md:w-15 ml-4 mb-2 md:mb-4" />
+            </div>
+          </div>
+        </div>
+
+      </header>
+    </div>
   );
 }
