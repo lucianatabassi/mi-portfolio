@@ -5,12 +5,12 @@ function CardProjects({ imagen, descripcion, año, etiqueta1, etiqueta2, link })
     link && (link.startsWith("http://") || link.startsWith("https://"));
 
   const cardContent = (
-    <div className="flex flex-col gap-4 group">
+    <div className="flex flex-col gap-4 group hover:bg-white/5 transition-colors duration-300 rounded-xl pt-2 px-2 pb-5">
       <div className="overflow-hidden rounded-lg">
         <img
           src={imagen}
           alt={descripcion}
-          className="w-full h-auto object-cover transition-all duration-500 ease-in-out hover:scale-[1.03] hover:grayscale"
+          className="w-full h-auto object-cover transition-all duration-500 ease-in-out hover:scale-[1.03]"
         />
       </div>
 

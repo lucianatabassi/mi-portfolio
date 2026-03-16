@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ShaderGradientComponent } from "../components/ShaderGradientComponent";
 import StarIcon from "../components/StarIcon";
+import Scroll from "../components/Scroll";
 
 export default function MiHeader() {
   const [textScale, setTextScale] = useState(1);
@@ -41,7 +42,8 @@ export default function MiHeader() {
           <ShaderGradientComponent />
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-center items-start z-10 pointer-events-none p-6 md:p-20 md:pt-50 text-left">
+        <Scroll>
+          <div className="absolute inset-0 flex flex-col justify-center items-center z-10 pointer-events-none p-6 md:p-20 md:pt-50 text-left">
           <div 
             style={{ 
               transform: `scale(${textScale})`, 
@@ -50,19 +52,23 @@ export default function MiHeader() {
             }}
             className="flex flex-col items-start"
           >
-            <span className="font-serif font-regular text-white/80 text-lg md:text-3xl mb-2">
-              Soy Luciana,
+            <span className="font-serif font-regular text-white/80 text-lg md:text-2xl">
+              ¡Hola! Soy Luciana,
             </span>
-            <div className="flex flex-row items-end justify-start">
-              <span className="font-sans text-white/90 font-semibold text-lg md:text-7xl">
-                una <i>diseñadora multimedial</i> enfocada en el
-                desarrollo de <i>productos digitales</i> que existen
+            <div className="flex flex-col justify-between">
+              <span className="font-sans text-white/90 font-regular text-lg md:text-5xl">
+                <i>diseñadora multimedial</i> enfocada en <br/> el
+                desarrollo de <i>productos digitales</i> que <br/> existen
                 para algo más que verse bien
               </span>
-              <StarIcon className="w-5 md:w-15 ml-4 mb-2 md:mb-4" />
+              <StarIcon className="w-5 md:w-8 ml-4 md:mt-3" />
             </div>
           </div>
         </div>
+
+        </Scroll>
+
+        
 
       </header>
     </div>

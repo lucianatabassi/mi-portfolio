@@ -24,7 +24,7 @@ function SobreMi() {
 
 
         <Paragraph>
-          Hola, soy Luciana Tabassi, Diseñadora Multimedial interdisciplinaria de Argentina. <br />
+          Soy Luciana Tabassi, Diseñadora Multimedial interdisciplinaria de Argentina. <br />
           <br />
           Mi enfoque combina la <i>creatividad</i> del diseño gráfico y la{" "}
           <i>psicología</i> del diseño UX/UI. Entiendo el diseño no

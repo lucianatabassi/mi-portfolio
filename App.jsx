@@ -5,7 +5,6 @@ import PaginaLenceriaProyecto from "./pages/PaginaLenceriaProyecto";
 import "./index.css";
 
 import MenuWeb from "./components/MenuWeb";
-import TwoColumnSection from "./components/TwoColumnSection";
 import Paragraph from "./components/Paragraph";
 import ContainerImages from "./components/ContainerImages";
 import CardProjects from "./components/CardProjects";
@@ -13,14 +12,13 @@ import Footer from "./components/Footer";
 import StarIcon from "./components/StarIcon";
 import Scroll from "./components/Scroll";
 import ParrallaxSection from "./components/ParrallaxSection";
-import CoverImage from "./components/CoverImage";
 import MiHeader from "./components/MiHeader";
-import { ShaderGradientComponent } from "./components/ShaderGradientComponent";
+import SectionWrapper from "./components/SectionWrapper";
 
 import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
 import fotoProyecto3 from "./assets/Mask group3.png";
-import fotoProyecto4 from "./assets/Mask group4.png";
+import fotoProyecto4 from "./assets/iPad Mockup.png";
 import portada from "./assets/Group 2276.svg";
 
 function App() {
@@ -92,16 +90,18 @@ function App() {
                   </ContainerImages>
                 </section>
 
-                <div className="flex flex-col justify-center items-center text-center w-full mt-20 pt-50 border-t border-gray-800 ">
-                  <StarIcon className="w-5 md:w-8" />
-                  <Paragraph variant="quote">
-                    ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi curiosidad
-                    por la <i>programación</i> me permite experimentar con la
-                    interactividad y transformar diseños estáticos en
-                    experiencias dinámicas.❞
-                  </Paragraph>
-                  <StarIcon className="w-5 md:w-8" />
-                </div>
+                <SectionWrapper>
+                  <div className="flex flex-col justify-center items-center text-center w-full mt-20 pt-50 border-t border-gray-800 ">
+                    <StarIcon className="w-5 md:w-8" />
+                    <Paragraph variant="quote">
+                      ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi
+                      curiosidad por la <i>programación</i> me permite
+                      experimentar con la interactividad y transformar diseños
+                      estáticos en experiencias dinámicas.❞
+                    </Paragraph>
+                    <StarIcon className="w-5 md:w-8" />
+                  </div>
+                </SectionWrapper>
               </ParrallaxSection>
             </main>
           }

@@ -6,28 +6,25 @@ function Footer() {
   return (
     <footer className="w-full bg-[#00000F]">
       <SectionWrapper>
-        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-center md:mb-40 gap-10 pt-50 border-t border-gray-800">
+        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-end md:mb-40 gap-10 pt-50 border-t border-gray-800">
           <Scroll>
-            <h2 className="text-6xl md:text-8xl font-serif leading-tighter tracking-tighter">
-              <i>Trabajemos</i> <br />
+            <h2 className="text-5xl md:text-6xl font-serif leading-tighter tracking-tighter">
+             Estoy <i>disponible</i>  para <br />
               
-              {/* --- ENVOLVEMOS "JUNTOS" Y EL ÍCONO AQUÍ --- */}
               <span className="inline-flex items-center gap-3 md:gap-5">
-                juntos
-                {/* Puedes ajustar el w-10 o w-16 para que la estrella quede del tamaño exacto que buscas */}
-                <StarIcon className="w-10 md:w-20" /> 
+              nuevos  <i> desafíos</i> 
+                <StarIcon className="w-10 md:w-15" /> 
               </span>
               
             </h2>
           </Scroll>
 
           <Scroll>
-            {/* Convertimos el <a> en un flex container con 'w-fit' para que la línea mida exacto lo que ocupa el contenido */}
             <a 
               href="mailto:tu-email@ejemplo.com" 
-              className="relative group pb-1 font-sans font-bold text-xl md:text-5xl uppercase text-white/90 hover:text-white transition-colors flex items-center gap-2 w-fit"
+              className="relative group pb-5 font-sans font-bold text-xl md:text-5xl uppercase text-white/90 hover:text-white transition-colors flex items-center gap-2 w-fit"
             >
-              Contacto
+              Contactame
               
               {/* --- ÍCONO DE FLECHA --- */}
               <svg 
@@ -40,7 +37,6 @@ function Footer() {
                 strokeWidth="2" 
                 strokeLinecap="round" 
                 strokeLinejoin="round"
-                // Esta clase hace que la flecha salte en diagonal al hacer hover
                 className="transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 w-5 h-5 md:w-10 md:h-10"
               >
                 <line x1="7" y1="17" x2="17" y2="7"></line>
