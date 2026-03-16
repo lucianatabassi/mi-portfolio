@@ -6,9 +6,9 @@ function Footer() {
   return (
     <footer className="w-full bg-[#00000F]">
       <SectionWrapper>
-        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-end md:mb-40 gap-10 pt-50 border-t border-gray-800">
+        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-end md:mb-40 gap-10 pt-20 md:pt-40 border-t border-gray-800">
           <Scroll>
-            <h2 className="text-5xl md:text-6xl font-serif leading-tighter tracking-tighter">
+            <h2 className="text-4xl md:text-6xl font-serif leading-tighter tracking-tighter">
              Estoy <i>disponible</i>  para <br />
               
               <span className="inline-flex items-center gap-3 md:gap-5">
@@ -22,7 +22,7 @@ function Footer() {
           <Scroll>
             <a 
               href="mailto:tu-email@ejemplo.com" 
-              className="relative group pb-5 font-sans font-bold text-xl md:text-5xl uppercase text-white/90 hover:text-white transition-colors flex items-center gap-2 w-fit"
+              className="relative group pb-5 font-sans font-bold text-2xl md:text-5xl uppercase text-white/90 hover:text-white transition-colors flex items-center gap-2 w-fit"
             >
               Contactame
               

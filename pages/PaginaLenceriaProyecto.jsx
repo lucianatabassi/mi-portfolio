@@ -82,7 +82,7 @@ function PaginaLenceriaProyecto() {
           </Paragraph>
 
           <div className="hidden md:block">
-            <StarIcon className="w-4  md:w-8" />
+            <StarIcon className="w-4 py-10  md:w-8" />
           </div>
 
           <Paragraph subtitulo={"Objetivos"}>
@@ -92,7 +92,7 @@ function PaginaLenceriaProyecto() {
           </Paragraph>
 
           <div className="hidden md:block">
-            <StarIcon className="w-4 md:w-8" />
+            <StarIcon className="w-4 py-10 md:w-8" />
           </div>
 
           <Paragraph subtitulo={"Solución"}>
@@ -121,7 +121,7 @@ function PaginaLenceriaProyecto() {
           </Paragraph>
 
           <div className="hidden md:block">
-            <StarIcon className="w-4 md:w-8" />
+            <StarIcon className="w-4 py-10 md:w-8" />
           </div>
 
           <Paragraph subtitulo={"Estrategia"}>
@@ -144,7 +144,7 @@ function PaginaLenceriaProyecto() {
           </Paragraph>
 
           <div className="hidden md:block">
-            <StarIcon className="w-4  md:w-8" />
+            <StarIcon className="w-4 py-10  md:w-8" />
           </div>
 
           <Paragraph subtitulo={"Estrategia visual"}>
@@ -157,7 +157,7 @@ function PaginaLenceriaProyecto() {
           </Paragraph>
 
           <div className="hidden md:block">
-            <StarIcon className="w-4 md:w-8" />
+            <StarIcon className="w-4 py-10 md:w-8" />
           </div>
 
           <Paragraph subtitulo={"Resultado"}>

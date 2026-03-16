@@ -5,8 +5,8 @@ function CardProjects({ imagen, descripcion, año, etiqueta1, etiqueta2, link })
     link && (link.startsWith("http://") || link.startsWith("https://"));
 
   const cardContent = (
-    <div className="flex flex-col gap-4 group hover:bg-white/5 transition-colors duration-300 rounded-xl pt-2 px-2 pb-5">
-      <div className="overflow-hidden rounded-lg">
+    <div className="flex flex-col gap-4 group md:hover:bg-white/5 transition-colors duration-300 rounded-xl md:pt-2 md:px-2 md:pb-5">
+      <div className="overflow-hidden rounded-md">
         <img
           src={imagen}
           alt={descripcion}
@@ -16,7 +16,7 @@ function CardProjects({ imagen, descripcion, año, etiqueta1, etiqueta2, link })
 
       <div className="flex flex-col gap-2 px-2">
         <div className="flex flex-wrap justify-between items-center">
-          <p className="text-sm font-semibold pt-3 md:text-xl text-base uppercase">{descripcion}</p>
+          <p className="text-md font-semibold pt-3 md:text-xl uppercase">{descripcion}</p>
           <span className="text-md text-gray-300">{año}</span>
         </div>
         

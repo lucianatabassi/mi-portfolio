@@ -19,7 +19,6 @@ import fotoProyecto1 from "./assets/Mask group.png";
 import fotoProyecto2 from "./assets/Mask group2.png";
 import fotoProyecto3 from "./assets/Mask group3.png";
 import fotoProyecto4 from "./assets/iPad Mockup.png";
-import portada from "./assets/Group 2276.svg";
 
 function App() {
   return (
@@ -56,6 +55,15 @@ function App() {
                         link="/catalogo-web"
                       />
                     </Scroll>
+                     <Scroll>
+                      <CardProjects
+                        imagen={fotoProyecto4}
+                        descripcion="Calendario Fórmula 1"
+                        año="2026"
+                        etiqueta1="DISEÑO UX/UI"
+                        etiqueta2="DESARROLLO FRONTEND"
+                      />
+                    </Scroll>
                     <Scroll>
                       <CardProjects
                         imagen={fotoProyecto2}
@@ -78,20 +86,12 @@ function App() {
                         }
                       />
                     </Scroll>
-                    <Scroll>
-                      <CardProjects
-                        imagen={fotoProyecto4}
-                        descripcion="Calendario Fórmula 1"
-                        año="2026"
-                        etiqueta1="DISEÑO UX/UI"
-                        etiqueta2="DESARROLLO FRONTEND"
-                      />
-                    </Scroll>
+                   
                   </ContainerImages>
                 </section>
 
                 <SectionWrapper>
-                  <div className="flex flex-col justify-center items-center text-center w-full mt-20 pt-50 border-t border-gray-800 ">
+                  <div className="flex flex-col justify-center items-center text-center w-full pt-45 md:mt-20 md:pt-50 border-t border-gray-800 ">
                     <StarIcon className="w-5 md:w-8" />
                     <Paragraph variant="quote">
                       ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi

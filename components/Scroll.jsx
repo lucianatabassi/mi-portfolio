@@ -1,29 +1,16 @@
 import { motion } from "framer-motion";
 
-const Scroll = ({ children, className = "" }) => {
+const Scroll = ({ children, className = "", delay = 0 }) => {
   return (
     <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          y: {
-            type: "spring",
-            stiffness: 80,
-            damping: 18,
-            mass: 0.8,
-          },
-          opacity: {
-            duration: 0.6,
-            ease: "easeOut",
-          },
-        },
-      }}
-      viewport={{
-        once: true,
-        margin: "0px 0px -80px 0px",
+      className={`w-full ${className}`}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.7,
+        delay: delay,
+        ease: [0.25, 0.1, 0.25, 1], // easing más natural
       }}
     >
       {children}
