@@ -4,7 +4,7 @@ import Scroll from "../components/Scroll";
 function SectionTitle({ children, subtitulo, className = "" }) {
   return (
     <div className="w-fit">
-      <Scroll>
+       <Scroll delay={0.2}>
       <h2 className={`text-3xl md:text-5xl leading-none ${className}`}>
       {children}
     </h2>

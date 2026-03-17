@@ -45,7 +45,7 @@ function App() {
                       </>
                     }
                   >
-                    <Scroll>
+                    <Scroll delay={0.4}>
                       <CardProjects
                         imagen={fotoProyecto1}
                         descripcion="Catálogo Web"
@@ -55,7 +55,7 @@ function App() {
                         link="/catalogo-web"
                       />
                     </Scroll>
-                     <Scroll>
+                      <Scroll delay={0.6}>
                       <CardProjects
                         imagen={fotoProyecto4}
                         descripcion="Calendario Fórmula 1"
@@ -64,7 +64,7 @@ function App() {
                         etiqueta2="DESARROLLO FRONTEND"
                       />
                     </Scroll>
-                    <Scroll>
+                    <Scroll delay={0.4}>
                       <CardProjects
                         imagen={fotoProyecto2}
                         descripcion="Posters Fórmula 1"
@@ -75,7 +75,7 @@ function App() {
                         }
                       />
                     </Scroll>
-                    <Scroll>
+                   <Scroll delay={0.6}>
                       <CardProjects
                         imagen={fotoProyecto3}
                         descripcion="Rediseño Menú Gastronómico"
@@ -92,14 +92,14 @@ function App() {
 
                 <SectionWrapper>
                   <div className="flex flex-col justify-center items-center text-center w-full pt-45 md:mt-20 md:pt-50 border-t border-gray-800 ">
-                    <StarIcon className="w-5 md:w-8" />
+                    <StarIcon className="w-5 md:w-8 pb-10" />
                     <Paragraph variant="quote">
                       ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi
                       curiosidad por la <i>programación</i> me permite
                       experimentar con la interactividad y transformar diseños
                       estáticos en experiencias dinámicas.❞
                     </Paragraph>
-                    <StarIcon className="w-5 md:w-8" />
+                    <StarIcon className="w-5 md:w-8 pt-10" />
                   </div>
                 </SectionWrapper>
               </ParrallaxSection>

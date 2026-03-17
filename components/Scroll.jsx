@@ -6,7 +6,7 @@ const Scroll = ({ children, className = "", delay = 0 }) => {
       className={`w-full ${className}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{
         duration: 0.7,
         delay: delay,

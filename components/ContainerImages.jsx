@@ -16,12 +16,11 @@ function ContainerImages({
   return (
     <div>
       <SectionWrapper>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-15 items-start">
-          <Scroll>
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-y-15 items-start">
             <div className="md:grid-rows-1">
               <SectionTitle>{titulo}</SectionTitle>
             </div>
-          </Scroll>
+          
           {children}
 
           {[imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7].map(

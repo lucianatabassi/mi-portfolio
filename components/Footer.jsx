@@ -44,12 +44,11 @@ function Footer() {
               </svg>
 
               {/* --- LÍNEA ANIMADA --- */}
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
             </a>
           </Scroll>
         </div>
 
-        {/* ... el resto de tu código de abajo queda igual ... */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-gray-800 gap-8 text-[12px] uppercase tracking-[0.2em] text-gray-400">
           <div className="flex gap-6">
             <a

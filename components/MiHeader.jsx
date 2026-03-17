@@ -65,12 +65,12 @@ export default function MiHeader() {
         }}
       >
         
-        {/* fondo shader */}
-        <div className="absolute inset-0 z-0">
+          
+       {/* <div className="absolute inset-0 z-0">
           <ShaderGradientComponent />
-        </div>
+        </div>*/}
 
-        <div className="absolute inset-0 flex flex-col justify-center items-start z-10 pointer-events-none p-6 md:p-20 md:pt-50 text-left">
+        <div className="absolute inset-0 flex flex-col justify-end items-start z-10 pointer-events-none p-6 md:p-20 md:pt-50 text-left">
           
           <motion.div
             variants={container}
@@ -88,11 +88,11 @@ export default function MiHeader() {
               variants={item}
               className="inline-flex gap-4 md:gap-6 items-center"
             >
-              <span className="font-serif text-white/80 text-lg md:text-2xl">
+              <span className="font-sans text-white/80 text-lg md:text-2xl">
                 ¡Hola! Soy Luciana —
               </span>
 
-              <span className="inline-flex items-center text-xl md:text-7xl gap-2">
+              <span className="inline-flex items-center text-xl md:text-6xl gap-2">
                 <i>diseñadora multimedial</i>
 
                 <motion.div
@@ -107,10 +107,10 @@ export default function MiHeader() {
             {/* línea 2 */}
             <motion.span
               variants={item}
-              className="font-sans text-white/90 font-semibold text-xl md:text-7xl leading-tight"
+              className="font-sans text-white/90 font-semibold text-xl md:text-6xl leading-tight"
             >
-              enfocada en crear <i>productos digitales</i> que <br />
-              existen para algo más que verse bien
+              enfocada en crear <i>productos digitales</i> <br /> con 
+              grandes propositos
             </motion.span>
 
           </motion.div>
