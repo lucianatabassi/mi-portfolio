@@ -15,10 +15,10 @@ import ParrallaxSection from "./components/ParrallaxSection";
 import MiHeader from "./components/MiHeader";
 import SectionWrapper from "./components/SectionWrapper";
 
-import fotoProyecto1 from "./assets/Mask group.png";
-import fotoProyecto2 from "./assets/Mask group2.png";
-import fotoProyecto3 from "./assets/Mask group3.png";
-import fotoProyecto4 from "./assets/iPad Mockup.png";
+import fotoProyecto1 from "./assets/01 Free Macbook Pro Mockup On Round Podium copia.jpg";
+import fotoProyecto2 from "./assets/Hand Holding A3 Poster Mockup copia.jpg";
+import fotoProyecto3 from "./assets/Mockup copia.jpg";
+import fotoProyecto4 from "./assets/iPad Mockup 1.png";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         <Route
           path="/"
           element={
-            <main className="flex flex-col gap-30">
+            <main className="flex flex-col gap-10">
               <header>
                 <MiHeader />
               </header>
@@ -41,11 +41,11 @@ function App() {
                   <ContainerImages
                     titulo={
                       <>
-                        Trabajos <br /> <i>destacados</i>
+                        Proyectos <br /> <i>destacados</i>
                       </>
                     }
                   >
-                    <Scroll delay={0.4}>
+                    <Scroll delay={0.6}>
                       <CardProjects
                         imagen={fotoProyecto1}
                         descripcion="Catálogo Web"
@@ -55,7 +55,7 @@ function App() {
                         link="/catalogo-web"
                       />
                     </Scroll>
-                      <Scroll delay={0.6}>
+                      <Scroll delay={0.4}>
                       <CardProjects
                         imagen={fotoProyecto4}
                         descripcion="Calendario Fórmula 1"
@@ -64,7 +64,7 @@ function App() {
                         etiqueta2="DESARROLLO FRONTEND"
                       />
                     </Scroll>
-                    <Scroll delay={0.4}>
+                    <Scroll delay={0.6}>
                       <CardProjects
                         imagen={fotoProyecto2}
                         descripcion="Posters Fórmula 1"
@@ -75,7 +75,7 @@ function App() {
                         }
                       />
                     </Scroll>
-                   <Scroll delay={0.6}>
+                   <Scroll delay={0.4}>
                       <CardProjects
                         imagen={fotoProyecto3}
                         descripcion="Rediseño Menú Gastronómico"
