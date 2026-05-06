@@ -5,7 +5,7 @@ function Paragraph({ subtitulo, children, variant = "normal" }) {
   const baseStyle = "py-5 font-sans leading-loose max-w-5xl flex flex-col gap-2 md:py-3 md:gap-3";
 
   const styles = {
-    normal: "font-semibold text-base md:text-xl text-gray-200", 
+    normal: "font-regular text-base md:text-xl text-gray-200", 
     quote: "font-semibold text-xl md:text-5xl", 
   };
   return (

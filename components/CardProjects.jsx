@@ -12,12 +12,12 @@ function CardProjects({
     link && (link.startsWith("http://") || link.startsWith("https://"));
 
   const cardContent = (
-    <div className="flex flex-col w-full h-180 gap-4 group md:hover:bg-white/5 transition-colors duration-300 rounded-xl md:pt-2 md:px-2 md:pb-5">
-      <div className="flex justify-center items-center overflow-hidden rounded-xl">
+    <div className="flex flex-col w-full h-200 gap-4 group md:hover:bg-white/5 transition-colors duration-300 rounded-xl md:pt-2 md:px-2 md:pb-5">
+      <div className="flex justify-center items-center overflow-hidden rounded-sm">
         <img
           src={imagen}
           alt={descripcion}
-          className="w-full h-180 object-cover transition-all duration-300 ease-in-out hover:scale-[1.07]"
+          className="w-full h-200 object-cover transition-all duration-300 ease-in-out hover:scale-[1.05]"
         />
       </div>
 

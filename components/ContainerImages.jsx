@@ -16,10 +16,11 @@ function ContainerImages({
   return (
     <div>
       <SectionWrapper>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 items-start">
-            <div className="md:grid-rows-1">
+        <div className="pb-10 md:grid-rows-1">
               <SectionTitle>{titulo}</SectionTitle>
             </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 items-start">
+            
           
           {children}
 

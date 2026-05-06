@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="w-full bg-[#00000F]">
       <SectionWrapper>
-        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-end md:mb-40 gap-10 pt-20 md:pt-40 border-t border-gray-800">
+        <div className="flex flex-col mb-20 lg:flex-row justify-between md:items-end md:mb-40 gap-10 pt-20 md:pt-40 border-t border-white/10">
           <Scroll>
             <h2 className="text-4xl md:text-6xl font-serif leading-tighter tracking-tighter">
              Estoy <i>disponible</i>  para <br />
@@ -49,7 +49,7 @@ function Footer() {
           </Scroll>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-gray-800 gap-8 text-[12px] uppercase tracking-[0.2em] text-gray-400">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/10 gap-8 text-[12px] uppercase tracking-[0.2em] text-gray-400">
           <div className="flex gap-6">
             <a
               href="https://www.behance.net/lucianatabassi"

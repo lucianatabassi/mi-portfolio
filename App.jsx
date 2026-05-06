@@ -18,7 +18,7 @@ import SectionWrapper from "./components/SectionWrapper";
 import fotoProyecto1 from "./assets/01 Free Macbook Pro Mockup On Round Podium copia.jpg";
 import fotoProyecto2 from "./assets/Hand Holding A3 Poster Mockup copia.jpg";
 import fotoProyecto3 from "./assets/Mockup copia.jpg";
-import fotoProyecto4 from "./assets/iPad Mockup 1.png";
+import fotoProyecto4 from "./assets/A4_Flyer_Mockup_1 copia.jpg";
 
 function App() {
   return (
@@ -31,19 +31,19 @@ function App() {
         <Route
           path="/"
           element={
-            <main className="flex flex-col gap-10">
+            <main className="flex flex-col gap-20">
               <header>
                 <MiHeader />
               </header>
 
-              <ParrallaxSection>
+            
                 <section id="proyectos">
                   <ContainerImages
-                    titulo={
-                      <>
-                        Proyectos <br /> <i>destacados</i>
-                      </>
-                    }
+                    // titulo={
+                    //   <>
+                    //     Proyectos <i>destacados</i>
+                    //   </>
+                    // }
                   >
                     <Scroll delay={0.6}>
                       <CardProjects
@@ -55,19 +55,10 @@ function App() {
                         link="/catalogo-web"
                       />
                     </Scroll>
-                      <Scroll delay={0.4}>
-                      <CardProjects
-                        imagen={fotoProyecto4}
-                        descripcion="Calendario Fórmula 1"
-                        año="2026"
-                        etiqueta1="DISEÑO UX/UI"
-                        etiqueta2="DESARROLLO FRONTEND"
-                      />
-                    </Scroll>
                     <Scroll delay={0.6}>
                       <CardProjects
                         imagen={fotoProyecto2}
-                        descripcion="Posters Fórmula 1"
+                        descripcion="Colección de Posters"
                         año="2025"
                         etiqueta1="DISEÑO GRÁFICO"
                         link={
@@ -86,23 +77,34 @@ function App() {
                         }
                       />
                     </Scroll>
+                   <Scroll delay={0.4}>
+                      <CardProjects
+                        imagen={fotoProyecto4}
+                        descripcion="Xplora Teatro"
+                        año="2022"
+                        etiqueta1="DISEÑO GRÁFICO"
+                        link={
+                          "https://www.behance.net/gallery/231033797/Restaurant-Menu-Flyer-Design"
+                        }
+                      />
+                    </Scroll>
                    
                   </ContainerImages>
                 </section>
 
                 <SectionWrapper>
-                  <div className="flex flex-col justify-center items-center text-center w-full pt-45 md:mt-20 md:pt-50 border-t border-gray-800 ">
-                    <StarIcon className="w-5 md:w-8 pb-10" />
+                  <div className="flex flex-col justify-center items-center text-center w-full pt-45 md:mt-20 md:pt-50 border-t border-white/10 ">
+                    <StarIcon className="w-5 md:w-8" />
                     <Paragraph variant="quote">
                       ❝ Aunque mi fuerte es el <i>diseño visual</i>, mi
                       curiosidad por la <i>programación</i> me permite
                       experimentar con la interactividad y transformar diseños
                       estáticos en experiencias dinámicas.❞
                     </Paragraph>
-                    <StarIcon className="w-5 md:w-8 pt-10" />
+                    <StarIcon className="w-5 md:w-8" />
                   </div>
                 </SectionWrapper>
-              </ParrallaxSection>
+              
             </main>
           }
         />
